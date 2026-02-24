@@ -28,14 +28,15 @@
                      x-transition:enter-start="opacity-0"
                      x-transition:enter-end="opacity-100"
                      class="flex items-center gap-2 min-w-0">
-                    <div class="w-9 h-9 bg-orange-500 rounded-lg flex items-center justify-center font-bold text-white text-base flex-shrink-0">N</div>
+                    <img src="/logo.jpeg" alt="NVAAK Logo" class="w-9 h-9 rounded-lg object-cover flex-shrink-0">
                     <div class="min-w-0">
                         <div class="font-bold text-sm leading-tight text-white">NVAAK IAS & NEET Academy</div>
                         <div class="text-xs text-blue-300 leading-tight">Faculty Portal</div>
                     </div>
                 </div>
-                <div x-show="!sidebarOpen"
-                     class="w-9 h-9 bg-orange-500 rounded-lg flex items-center justify-center font-bold text-white text-base flex-shrink-0 mx-auto">N</div>
+                <div x-show="!sidebarOpen" class="flex-shrink-0 mx-auto">
+                    <img src="/logo.jpeg" alt="NVAAK Logo" class="w-9 h-9 rounded-lg object-cover">
+                </div>
                 <button @click="sidebarOpen = !sidebarOpen"
                         class="text-blue-300 hover:text-white p-1.5 rounded-md transition-colors flex-shrink-0 ml-1">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

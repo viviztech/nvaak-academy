@@ -19,8 +19,7 @@
 
         <!-- Logo -->
         <div class="flex items-center gap-3 px-5 py-4 border-b border-blue-900">
-            <div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-base text-white"
-                 style="background-color: #f97316;">N</div>
+            <img src="/logo.jpeg" alt="NVAAK Logo" class="w-9 h-9 rounded-xl object-cover flex-shrink-0">
             <div>
                 <p class="text-white font-bold text-sm leading-tight">NVAAK IAS & NEET Academy</p>
                 <p class="text-blue-300 text-xs">Student Portal</p>

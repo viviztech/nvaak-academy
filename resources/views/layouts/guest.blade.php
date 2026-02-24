@@ -26,9 +26,7 @@
 
             {{-- Logo --}}
             <a href="/" class="flex items-center gap-3 relative z-10">
-                <div class="h-10 w-10 rounded-xl flex items-center justify-center bg-white/10">
-                    <span class="text-white font-extrabold text-sm tracking-tight">NA</span>
-                </div>
+                <img src="/logo.jpeg" alt="NVAAK Academy Logo" class="h-10 w-10 rounded-xl object-cover">
                 <div class="leading-tight">
                     <span class="text-xl font-extrabold text-white">NVAAK</span>
                     <span class="text-xs text-blue-300 block -mt-1">IAS & NEET Academy</span>
@@ -71,9 +69,7 @@
             {{-- Mobile logo --}}
             <div class="lg:hidden mb-8">
                 <a href="/" class="flex items-center gap-2">
-                    <div class="h-10 w-10 rounded-xl flex items-center justify-center" style="background:#1E3A5F;">
-                        <span class="text-white font-extrabold text-sm">NA</span>
-                    </div>
+                    <img src="/logo.jpeg" alt="NVAAK Academy Logo" class="h-10 w-10 rounded-xl object-cover">
                     <div class="leading-tight">
                         <span class="text-lg font-extrabold" style="color:#1E3A5F;">NVAAK</span>
                         <span class="text-xs text-gray-500 block -mt-1">IAS & NEET Academy</span>

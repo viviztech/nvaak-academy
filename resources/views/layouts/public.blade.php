@@ -24,12 +24,10 @@
 
                 {{-- Logo --}}
                 <a href="/" class="flex items-center gap-2">
-                    <div class="h-9 w-9 rounded-lg flex items-center justify-center" style="background-color:#1E3A5F">
-                        <span class="text-white font-extrabold text-sm tracking-tight">NA</span>
-                    </div>
+                    <img src="/logo.jpeg" alt="NVAAK Academy Logo" class="h-10 w-10 rounded-lg object-cover">
                     <div class="leading-tight">
                         <span class="text-lg font-extrabold" style="color:#1E3A5F">NVAAK</span>
-                        <span class="text-xs text-gray-500 block -mt-1">Academy</span>
+                        <span class="text-xs text-gray-500 block -mt-1">IAS & NEET Academy</span>
                     </div>
                 </a>
 
@@ -102,10 +100,8 @@
 
                 {{-- Brand --}}
                 <div class="md:col-span-2">
-                    <div class="flex items-center gap-2 mb-4">
-                        <div class="h-9 w-9 rounded-lg bg-white/10 flex items-center justify-center">
-                            <span class="text-white font-extrabold text-sm">NA</span>
-                        </div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="/logo.jpeg" alt="NVAAK Academy Logo" class="h-10 w-10 rounded-lg object-cover">
                         <span class="text-xl font-extrabold text-white">NVAAK IAS & NEET Academy</span>
                     </div>
                     <p class="text-sm text-blue-200 leading-relaxed mb-4">
