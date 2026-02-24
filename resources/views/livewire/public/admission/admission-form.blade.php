@@ -189,11 +189,11 @@
                         <select wire:model="caste_category"
                                 class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
                             <option value="">Select</option>
-                            <option>General</option>
-                            <option>OBC</option>
-                            <option>SC</option>
-                            <option>ST</option>
-                            <option>MBC</option>
+                            <option value="general">General</option>
+                            <option value="obc">OBC</option>
+                            <option value="sc">SC</option>
+                            <option value="st">ST</option>
+                            <option value="ews">EWS</option>
                         </select>
                     </div>
                 </div>
@@ -243,10 +243,10 @@
                         <select wire:model="board"
                                 class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
                             <option value="">Select board</option>
-                            <option>CBSE</option>
-                            <option>ICSE</option>
-                            <option>Tamil Nadu State</option>
-                            <option>Other State</option>
+                            <option value="cbse">CBSE</option>
+                            <option value="icse">ICSE</option>
+                            <option value="state">Tamil Nadu State</option>
+                            <option value="other">Other State</option>
                         </select>
                     </div>
                     <div>
