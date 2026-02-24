@@ -12,7 +12,7 @@
     {{-- ── Header bar ─────────────────────────────────────────────────── --}}
     <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-6">
         <div>
-            <a href="{{ route('admissions.index') }}"
+            <a href="{{ route('admin.admissions.index') }}"
                class="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-700 mb-2">
                 <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
                 Back to Admissions
