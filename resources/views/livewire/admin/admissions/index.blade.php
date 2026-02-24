@@ -92,7 +92,7 @@
                                         Reject
                                     </button>
                                 @endif
-                                <a href="{{ route('admin.admissions.detail', $admission->id) }}"
+                                <a href="{{ route('admissions.detail', $admission->id) }}"
                                     class="text-xs px-3 py-1 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-50">
                                     View
                                 </a>

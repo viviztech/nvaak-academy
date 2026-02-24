@@ -26,9 +26,7 @@ Route::middleware(['auth', 'role:super-admin|admin|counsellor'])->prefix('admin'
     // Admissions
     Route::middleware('role:super-admin|admin')->group(function () {
         Route::get('/admissions', \App\Livewire\Admin\Admissions\Index::class)->name('admissions.index');
-        Route::get('/admissions/{id}', function () {
-            return view('livewire.admin.admissions.detail');
-        })->name('admissions.detail');
+        Route::get('/admissions/{id}', \App\Livewire\Admin\Admissions\Detail::class)->name('admissions.detail');
 
         // Batches
         Route::get('/batches', \App\Livewire\Admin\Batches\Index::class)->name('batches.index');
