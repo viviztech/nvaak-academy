@@ -56,7 +56,7 @@
                         ['500+', 'Students Trained', 'M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z'],
                         ['85%', 'NEET Success Rate', 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'],
                         ['15+', 'Expert Faculty', 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z'],
-                        ['EMI', 'From ₹3,750/mo', 'M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z'],
+                        ['10+', 'Years of Excellence', 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z'],
                     ] as [$number, $label, $icon])
                     <div class="rounded-2xl p-5 border border-white/10" style="background:rgba(255,255,255,0.08);">
                         <svg class="h-7 w-7 mb-3" style="color:#F97316;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -78,7 +78,6 @@
                 @foreach([
                     ['✓ 100% Secure Admission', '#F97316'],
                     ['✓ Money-Back Guarantee', '#1E3A5F'],
-                    ['✓ EMI Available', '#F97316'],
                     ['✓ Hybrid Learning (Online + Centre)', '#1E3A5F'],
                     ['✓ 24/7 Doubt Clearing', '#F97316'],
                 ] as [$text, $color])
@@ -109,16 +108,6 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <div class="grid grid-cols-2 gap-4 mb-6">
-                            <div class="bg-blue-50 rounded-xl p-4 text-center">
-                                <p class="text-xl font-extrabold" style="color:#1E3A5F;">₹25,000</p>
-                                <p class="text-xs text-gray-500 mt-0.5">1-Year Program</p>
-                            </div>
-                            <div class="bg-orange-50 rounded-xl p-4 text-center">
-                                <p class="text-xl font-extrabold" style="color:#F97316;">₹45,000</p>
-                                <p class="text-xs text-gray-500 mt-0.5">2-Year Program</p>
-                            </div>
-                        </div>
                         <ul class="space-y-2.5 mb-6">
                             @foreach([
                                 '500+ Full-length mock tests',
@@ -139,7 +128,6 @@
                            style="background-color:#F97316;">
                             Enroll in NEET →
                         </a>
-                        <p class="text-center text-xs text-gray-400 mt-2">EMI from ₹3,750/month • Limited seats for 2026 batch</p>
                     </div>
                 </div>
 
@@ -153,12 +141,6 @@
                         </div>
                     </div>
                     <div class="p-6">
-                        <div class="grid grid-cols-1 gap-4 mb-6">
-                            <div class="bg-green-50 rounded-xl p-4 text-center">
-                                <p class="text-xl font-extrabold text-green-700">From ₹15,000</p>
-                                <p class="text-xs text-gray-500 mt-0.5">Per year · Group 1 / 2 / 4 available</p>
-                            </div>
-                        </div>
                         <ul class="space-y-2.5 mb-6">
                             @foreach([
                                 'Group 1, Group 2 & Group 4 programmes',
@@ -179,7 +161,6 @@
                            style="background-color:#2d6a4f;">
                             Enroll in TNPSC →
                         </a>
-                        <p class="text-center text-xs text-gray-400 mt-2">EMI available • Enroll before December 31</p>
                     </div>
                 </div>
             </div>
@@ -211,42 +192,6 @@
                     <p class="text-sm text-gray-500 leading-relaxed">{{ $desc }}</p>
                 </div>
                 @endforeach
-            </div>
-        </div>
-    </section>
-
-    {{-- ── Faculty Section ──────────────────────────────────────────────── --}}
-    <section id="faculty" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-14">
-                <span class="text-sm font-semibold uppercase tracking-widest" style="color:#F97316;">Expert Mentors</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2" style="color:#1E3A5F;">Learn from the Best Faculty</h2>
-                <p class="text-gray-500 mt-3">Our faculty brings decades of teaching experience and a passion for student success.</p>
-            </div>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                @foreach([
-                    ['Dr. Rajesh Kumar', 'Physics Expert', 'MBBS', '12+ Years', '500+ NEET Selections', '#1E3A5F', 'RK'],
-                    ['Dr. Priya Menon', 'Chemistry Expert', 'MD', '10+ Years', '400+ Selections', '#2d6a4f', 'PM'],
-                    ['Prof. Suresh Iyer', 'TNPSC Expert', 'IAS (Retd.)', '15+ Years', '300+ Selections', '#7c3aed', 'SI'],
-                    ['Dr. Anjali Reddy', 'Biology Expert', 'MBBS', '8+ Years', '350+ Selections', '#b45309', 'AR'],
-                ] as [$name, $role, $qual, $exp, $sel, $color, $initials])
-                <div class="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-md transition-shadow border border-gray-100">
-                    <div class="h-16 w-16 rounded-full mx-auto mb-4 flex items-center justify-center text-white font-bold text-lg" style="background-color:{{ $color }}">
-                        {{ $initials }}
-                    </div>
-                    <h3 class="font-bold text-gray-900 text-sm">{{ $name }}</h3>
-                    <p class="text-xs font-semibold mt-0.5" style="color:{{ $color }}">{{ $role }}</p>
-                    <div class="mt-3 space-y-1">
-                        <p class="text-xs text-gray-500">{{ $qual }} · {{ $exp }}</p>
-                        <p class="text-xs font-semibold text-green-600">{{ $sel }}</p>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-
-            <div class="text-center mt-8">
-                <p class="text-gray-500 text-sm">+ 11 more expert faculty members across all subjects</p>
             </div>
         </div>
     </section>
