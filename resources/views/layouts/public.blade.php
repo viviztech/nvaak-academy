@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ $title ?? 'NVAAK Academy – NEET & TNPSC Coaching in Avadi, Chennai' }}</title>
+    <title>{{ $title ?? 'NVAAK IAS & NEET Academy – NEET & TNPSC Coaching in Avadi, Chennai' }}</title>
     <meta name="description" content="Expert NEET & TNPSC coaching in Avadi, Chennai. Live classes, 15+ expert faculty, 85% success rate. 500+ students trained.">
 
     <!-- Fonts -->
@@ -106,7 +106,7 @@
                         <div class="h-9 w-9 rounded-lg bg-white/10 flex items-center justify-center">
                             <span class="text-white font-extrabold text-sm">NA</span>
                         </div>
-                        <span class="text-xl font-extrabold text-white">NVAAK Academy</span>
+                        <span class="text-xl font-extrabold text-white">NVAAK IAS & NEET Academy</span>
                     </div>
                     <p class="text-sm text-blue-200 leading-relaxed mb-4">
                         Expert NEET & TNPSC coaching in Avadi, Chennai. Empowering students to achieve their medical and government career dreams since 2015.
@@ -158,7 +158,7 @@
             </div>
 
             <div class="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-2">
-                <p class="text-sm text-blue-300">&copy; {{ date('Y') }} NVAAK Academy. All rights reserved.</p>
+                <p class="text-sm text-blue-300">&copy; {{ date('Y') }} NVAAK IAS & NEET Academy. All rights reserved.</p>
                 <p class="text-xs text-blue-400">NEET & TNPSC Coaching Institute, Avadi, Chennai</p>
             </div>
         </div>

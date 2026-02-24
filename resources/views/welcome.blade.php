@@ -1,4 +1,4 @@
-@extends('layouts.public', ['title' => 'NVAAK Academy – NEET & TNPSC Coaching in Avadi, Chennai'])
+@extends('layouts.public', ['title' => 'NVAAK IAS & NEET Academy – NEET & TNPSC Coaching in Avadi, Chennai'])
 @section('content')
 
     {{-- ── Hero Section ────────────────────────────────────────────────── --}}
@@ -257,7 +257,7 @@
             <div class="text-center mb-14">
                 <span class="text-sm font-semibold uppercase tracking-widest text-orange-400">Proven Results</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Our Students' Success Stories</h2>
-                <p class="text-blue-200 mt-3">Real students, real results. Here's what NVAAK Academy has achieved.</p>
+                <p class="text-blue-200 mt-3">Real students, real results. Here's what NVAAK IAS & NEET Academy has achieved.</p>
             </div>
 
             {{-- Stats row --}}
@@ -284,7 +284,7 @@
                     <p class="text-white font-semibold text-lg mb-1">Priya Sharma</p>
                     <p class="text-orange-400 text-sm font-bold mb-3">NEET 2025 – AIR 245 · Madras Medical College</p>
                     <p class="text-blue-100 text-sm leading-relaxed">
-                        "NVAAK Academy's structured approach and dedicated faculty helped me crack NEET in my first attempt. The mock tests and doubt sessions were game-changers for me."
+                        "NVAAK IAS & NEET Academy's structured approach and dedicated faculty helped me crack NEET in my first attempt. The mock tests and doubt sessions were game-changers for me."
                     </p>
                 </div>
 

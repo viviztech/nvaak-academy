@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ $title ?? 'Admin' }} — NVAAK Academy</title>
+    <title>{{ $title ?? 'Admin' }} — NVAAK IAS & NEET Academy</title>
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700&display=swap" rel="stylesheet" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -30,7 +30,7 @@
                      class="flex items-center gap-2 min-w-0">
                     <div class="w-9 h-9 bg-orange-500 rounded-lg flex items-center justify-center font-bold text-white text-base flex-shrink-0">N</div>
                     <div class="min-w-0">
-                        <div class="font-bold text-sm leading-tight text-white">NVAAK Academy</div>
+                        <div class="font-bold text-sm leading-tight text-white">NVAAK IAS & NEET Academy</div>
                         <div class="text-xs text-blue-300 leading-tight">Management System</div>
                     </div>
                 </div>

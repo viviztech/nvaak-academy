@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ $title ?? 'Student Portal' }} — NVAAK Academy</title>
+    <title>{{ $title ?? 'Student Portal' }} — NVAAK IAS & NEET Academy</title>
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700&display=swap" rel="stylesheet" />
     @livewireStyles
@@ -22,7 +22,7 @@
             <div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-base text-white"
                  style="background-color: #f97316;">N</div>
             <div>
-                <p class="text-white font-bold text-sm leading-tight">NVAAK Academy</p>
+                <p class="text-white font-bold text-sm leading-tight">NVAAK IAS & NEET Academy</p>
                 <p class="text-blue-300 text-xs">Student Portal</p>
             </div>
         </div>
@@ -86,7 +86,7 @@
 
         <!-- Sidebar footer -->
         <div class="px-4 py-3 border-t border-blue-900">
-            <p class="text-blue-400 text-xs text-center">NVAAK Academy &copy; {{ date('Y') }}</p>
+            <p class="text-blue-400 text-xs text-center">NVAAK IAS & NEET Academy &copy; {{ date('Y') }}</p>
         </div>
     </aside>
 

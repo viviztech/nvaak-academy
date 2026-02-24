@@ -5,7 +5,7 @@
             key: $event.detail.key,
             amount: $event.detail.amount * 100,
             currency: 'INR',
-            name: 'NVAAK Academy',
+            name: 'NVAAK IAS & NEET Academy',
             description: 'Fee Payment',
             order_id: $event.detail.order_id,
             handler: function(response) {
