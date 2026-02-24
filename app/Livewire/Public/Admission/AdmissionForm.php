@@ -3,6 +3,7 @@
 namespace App\Livewire\Public\Admission;
 
 use App\Models\Admission;
+use App\Models\Institute;
 use Livewire\Component;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
@@ -184,7 +185,10 @@ class AdmissionForm extends Component
             $documentPaths['marksheet'] = $path;
         }
 
+        $institute = Institute::first();
+
         $admission = Admission::create([
+            'institute_id'         => $institute->id,
             'application_number'   => $applicationNumber,
             'status'               => 'submitted',
             'submitted_at'         => now(),
