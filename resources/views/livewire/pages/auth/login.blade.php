@@ -24,7 +24,7 @@ new #[Layout('layouts.guest')] class extends Component
 <div>
     {{-- Heading --}}
     <div class="mb-8">
-        <h1 class="text-2xl font-extrabold" style="color:#1E3A5F;">Welcome back</h1>
+        <h1 class="text-2xl font-extrabold" style="color:#218091;">Welcome back</h1>
         <p class="text-sm text-gray-500 mt-1">Sign in to your NVAAK Academy account</p>
     </div>
 
@@ -46,8 +46,8 @@ new #[Layout('layouts.guest')] class extends Component
                    placeholder="you@example.com"
                    class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm text-gray-900 placeholder-gray-400
                           focus:outline-none focus:ring-2 focus:border-transparent transition"
-                   style="focus:ring-color:#1E3A5F;"
-                   onfocus="this.style.boxShadow='0 0 0 3px rgba(30,58,95,0.15)'; this.style.borderColor='#1E3A5F';"
+                   style="focus:ring-color:#218091;"
+                   onfocus="this.style.boxShadow='0 0 0 3px rgba(33,128,145,0.15)'; this.style.borderColor='#218091';"
                    onblur="this.style.boxShadow=''; this.style.borderColor='#e5e7eb';">
             @error('form.email')
                 <p class="mt-1.5 text-xs text-red-600">{{ $message }}</p>
@@ -60,7 +60,7 @@ new #[Layout('layouts.guest')] class extends Component
                 <label for="password" class="block text-sm font-semibold text-gray-700">Password</label>
                 @if (Route::has('password.request'))
                     <a href="{{ route('password.request') }}" wire:navigate
-                       class="text-xs font-medium hover:underline" style="color:#F97316;">
+                       class="text-xs font-medium hover:underline" style="color:#218091;">
                         Forgot password?
                     </a>
                 @endif
@@ -71,7 +71,7 @@ new #[Layout('layouts.guest')] class extends Component
                    placeholder="••••••••"
                    class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm text-gray-900 placeholder-gray-400
                           focus:outline-none transition"
-                   onfocus="this.style.boxShadow='0 0 0 3px rgba(30,58,95,0.15)'; this.style.borderColor='#1E3A5F';"
+                   onfocus="this.style.boxShadow='0 0 0 3px rgba(33,128,145,0.15)'; this.style.borderColor='#218091';"
                    onblur="this.style.boxShadow=''; this.style.borderColor='#e5e7eb';">
             @error('form.password')
                 <p class="mt-1.5 text-xs text-red-600">{{ $message }}</p>
@@ -83,14 +83,14 @@ new #[Layout('layouts.guest')] class extends Component
             <input wire:model="form.remember"
                    id="remember" name="remember" type="checkbox"
                    class="h-4 w-4 rounded border-gray-300 cursor-pointer"
-                   style="accent-color:#1E3A5F;">
+                   style="accent-color:#218091;">
             <label for="remember" class="text-sm text-gray-600 cursor-pointer select-none">Remember me</label>
         </div>
 
         {{-- Submit --}}
         <button type="submit"
                 class="w-full py-3.5 rounded-xl text-sm font-bold text-white shadow-md transition-opacity hover:opacity-90 flex items-center justify-center gap-2"
-                style="background-color:#1E3A5F;">
+                style="background-color:#218091;">
             <span wire:loading.remove wire:target="login">Sign In</span>
             <span wire:loading wire:target="login" class="flex items-center gap-2">
                 <svg class="animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
@@ -112,8 +112,8 @@ new #[Layout('layouts.guest')] class extends Component
 
     {{-- Apply CTA --}}
     <a href="{{ route('admission.apply') }}"
-       class="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl text-sm font-bold border-2 transition-colors hover:bg-orange-50"
-       style="border-color:#F97316; color:#F97316;">
+       class="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl text-sm font-bold border-2 transition-colors hover:bg-nvaak-teal-50"
+       style="border-color:#218091; color:#218091;">
         Apply for Admission →
     </a>
 

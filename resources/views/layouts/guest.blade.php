@@ -6,7 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'NVAAK IAS & NEET Academy') }}</title>
     <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700,800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700,800&display=swap" rel="stylesheet" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
 </head>
@@ -16,7 +16,7 @@
 
         {{-- ── Left panel: brand / illustration ──────────────────────── --}}
         <div class="hidden lg:flex lg:w-1/2 flex-col justify-between p-12 relative overflow-hidden"
-             style="background: linear-gradient(135deg,#1E3A5F 0%,#163050 60%,#0f2240 100%);">
+             style="background: linear-gradient(135deg,#218091 0%,#1a6b7a 60%,#145663 100%);">
 
             {{-- Decorative circles --}}
             <div class="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10"
@@ -29,7 +29,7 @@
                 <img src="/logo.jpeg" alt="NVAAK Academy Logo" class="h-10 w-10 rounded-xl object-cover">
                 <div class="leading-tight">
                     <span class="text-xl font-extrabold text-white">NVAAK</span>
-                    <span class="text-xs text-blue-300 block -mt-1">IAS & NEET Academy</span>
+                    <span class="text-xs text-white/70 block -mt-1">IAS & NEET Academy</span>
                 </div>
             </a>
 
@@ -38,10 +38,10 @@
                 <div>
                     <h2 class="text-4xl font-extrabold text-white leading-tight mb-4">
                         Your Path to<br>
-                        <span style="color:#F97316;">Medical &</span><br>
+                        <span style="color:#218091;">Medical &</span><br>
                         Government Success
                     </h2>
-                    <p class="text-blue-200 text-base leading-relaxed max-w-sm">
+                    <p class="text-white/80 text-base leading-relaxed max-w-sm">
                         Expert NEET & TNPSC coaching in Avadi, Chennai. Join 500+ students who achieved their dreams with us.
                     </p>
                 </div>
@@ -51,14 +51,14 @@
                     @foreach([['500+','Students'],['85%','Success Rate'],['15+','Faculty']] as [$n,$l])
                     <div class="rounded-xl p-4 text-center border border-white/10" style="background:rgba(255,255,255,0.07);">
                         <p class="text-2xl font-extrabold text-white">{{ $n }}</p>
-                        <p class="text-xs text-blue-300 mt-0.5">{{ $l }}</p>
+                        <p class="text-xs text-white/70 mt-0.5">{{ $l }}</p>
                     </div>
                     @endforeach
                 </div>
             </div>
 
             {{-- Footer --}}
-            <p class="text-blue-400 text-xs relative z-10">
+            <p class="text-white/50 text-xs relative z-10">
                 &copy; {{ date('Y') }} NVAAK IAS & NEET Academy · Avadi, Chennai
             </p>
         </div>
@@ -71,7 +71,7 @@
                 <a href="/" class="flex items-center gap-2">
                     <img src="/logo.jpeg" alt="NVAAK Academy Logo" class="h-10 w-10 rounded-xl object-cover">
                     <div class="leading-tight">
-                        <span class="text-lg font-extrabold" style="color:#1E3A5F;">NVAAK</span>
+                        <span class="text-lg font-extrabold" style="color:#218091;">NVAAK</span>
                         <span class="text-xs text-gray-500 block -mt-1">IAS & NEET Academy</span>
                     </div>
                 </a>
