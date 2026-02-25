@@ -4,16 +4,71 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ $title ?? 'NVAAK IAS & NEET Academy – NEET & TNPSC Coaching in Avadi, Chennai' }}</title>
-    <meta name="description" content="Expert NEET & TNPSC coaching in Avadi, Chennai. Live classes, 15+ expert faculty, 85% success rate. 500+ students trained.">
 
-    <!-- Fonts -->
+    <!-- Primary Meta Tags -->
+    <title>{{ $title ?? 'NVAAK IAS & NEET Academy – NEET & TNPSC Coaching in Avadi, Chennai' }}</title>
+    <meta name="title" content="{{ $title ?? 'Best NEET & TNPSC Coaching Center in Avadi, Chennai' }}">
+    <meta name="description" content="{{ $description ?? 'NVAAK Academy offers expert NEET and TNPSC coaching in Avadi, Chennai. Live online classes, 15+ experienced faculty, 85% success rate. Enroll now!' }}">
+    <meta name="keywords" content="NEET coaching Avadi, TNPSC coaching Chennai, medical entrance coaching, government exam coaching, online classes">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="{{ $title ?? 'NVAAK Academy – Best NEET & TNPSC Coaching in Avadi' }}">
+    <meta property="og:description" content="{{ $description ?? 'Expert coaching for NEET and TNPSC exams in Avadi, Chennai.' }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="{{ $title ?? 'NVAAK Academy' }}">
+    <meta property="twitter:description" content="{{ $description ?? 'Expert NEET & TNPSC Coaching in Avadi, Chennai' }}">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    <!-- Fonts — Inter (matches /Sites/nvaak design system) -->
     <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700,800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700,800&display=swap" rel="stylesheet" />
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
+
+    <!-- Local Business Schema (SEO) -->
+    @php
+        $schema = [
+            "@context" => "https://schema.org",
+            "@type" => "EducationalOrganization",
+            "name" => "NVAAK IAS & NEET Academy",
+            "description" => "NEET and TNPSC Coaching Center in Avadi, Chennai",
+            "url" => config('app.url'),
+            "telephone" => "+91-99405-28779",
+            "email" => "info@nvaakacademy.com",
+            "address" => [
+                "@type" => "PostalAddress",
+                "streetAddress" => "No. 3517 A, TNHB",
+                "addressLocality" => "Avadi",
+                "addressRegion" => "Tamil Nadu",
+                "postalCode" => "600054",
+                "addressCountry" => "IN"
+            ],
+            "geo" => [
+                "@type" => "GeoCoordinates",
+                "latitude" => "13.1165",
+                "longitude" => "80.0984"
+            ],
+            "priceRange" => "₹₹",
+            "areaServed" => ["Chennai", "Avadi", "Tamil Nadu"],
+            "aggregateRating" => [
+                "@type" => "AggregateRating",
+                "ratingValue" => "4.8",
+                "reviewCount" => "250"
+            ]
+        ];
+    @endphp
+    <script type="application/ld+json">
+    {!! json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
+    </script>
 </head>
 <body class="font-sans antialiased bg-white">
 
