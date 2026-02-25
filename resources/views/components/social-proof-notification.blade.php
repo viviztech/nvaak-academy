@@ -13,7 +13,7 @@
     <div class="bg-white rounded-xl shadow-2xl border border-gray-100 p-4 flex items-start gap-3">
         <div class="flex-shrink-0">
             <div class="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-bold"
-                 style="background-color:#1E3A5F;">
+                 style="background-color:#218091;">
                 <span x-text="notification.initials || '👤'"></span>
             </div>
         </div>

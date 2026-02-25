@@ -2,14 +2,14 @@
 @section('content')
 
     {{-- ── Page Hero ──────────────────────────────────────────────────────── --}}
-    <section class="py-16" style="background:linear-gradient(135deg,#1E3A5F 0%,#163050 60%,#0f2240 100%);">
+    <section class="py-16" style="background:linear-gradient(135deg,#218091 0%,#1a6b7a 60%,#145663 100%);">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4"
                   style="background:rgba(249,115,22,0.15); color:#F97316; border:1px solid rgba(249,115,22,0.3);">
                 We're Here to Help
             </span>
             <h1 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">Contact Us</h1>
-            <p class="text-lg text-blue-200 max-w-2xl mx-auto">
+            <p class="text-lg text-white/80 max-w-2xl mx-auto">
                 Have questions about our courses? We'd love to hear from you. Reach us by phone, WhatsApp, email or visit our centre.
             </p>
         </div>
@@ -22,7 +22,7 @@
 
                 {{-- Contact Info --}}
                 <div>
-                    <h2 class="text-2xl font-extrabold mb-8" style="color:#1E3A5F;">Get in Touch</h2>
+                    <h2 class="text-2xl font-extrabold mb-8" style="color:#218091;">Get in Touch</h2>
                     <div class="space-y-4">
                         @foreach([
                             ['📍', 'Our Address',    'No. 3517 A, TNHB, Avadi, Chennai – 600054', null],
@@ -37,7 +37,7 @@
                                 <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-0.5">{{ $label }}</p>
                                 @if($link)
                                     <a href="{{ $link }}" target="{{ str_starts_with($link, 'http') ? '_blank' : '_self' }}"
-                                       class="text-sm font-semibold hover:underline" style="color:#1E3A5F;">{{ $value }}</a>
+                                       class="text-sm font-semibold hover:underline" style="color:#218091;">{{ $value }}</a>
                                 @else
                                     <p class="text-sm font-semibold text-gray-800">{{ $value }}</p>
                                 @endif
@@ -59,7 +59,7 @@
                 {{-- Enquiry Form --}}
                 <div>
                     <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
-                        <h2 class="text-2xl font-extrabold mb-2" style="color:#1E3A5F;">Send Us a Message</h2>
+                        <h2 class="text-2xl font-extrabold mb-2" style="color:#218091;">Send Us a Message</h2>
                         <p class="text-sm text-gray-500 mb-6">We usually respond within 2 hours during office hours.</p>
 
                         <form id="contact-form" x-data="contactForm()" @submit.prevent="submit" class="space-y-4">
@@ -106,7 +106,7 @@
 
                             <button type="submit" :disabled="loading"
                                     class="w-full py-3.5 text-sm font-bold text-white rounded-xl transition-opacity hover:opacity-90 flex items-center justify-center gap-2"
-                                    style="background-color:#1E3A5F;">
+                                    style="background-color:#218091;">
                                 <span x-show="!loading">Send Message →</span>
                                 <span x-show="loading" class="flex items-center gap-2">
                                     <svg class="animate-spin h-4 w-4" fill="none" viewBox="0 0 24 24">

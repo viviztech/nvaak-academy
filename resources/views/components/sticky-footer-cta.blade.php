@@ -12,7 +12,7 @@
     <div class="max-w-7xl mx-auto px-4 py-3">
         <div class="flex items-center justify-between flex-wrap gap-4">
             <div class="flex-1 min-w-[200px]">
-                <p class="text-sm font-semibold" style="color:#1E3A5F;">Ready to start your journey?</p>
+                <p class="text-sm font-semibold" style="color:#218091;">Ready to start your journey?</p>
                 <p class="text-xs text-gray-500">Book a free demo class today — no commitment required.</p>
             </div>
             <div class="flex items-center gap-3">

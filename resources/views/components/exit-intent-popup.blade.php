@@ -10,7 +10,7 @@
         <div class="p-8">
             <div class="text-center mb-6">
                 <div class="text-5xl mb-3">🎯</div>
-                <h3 class="text-xl font-extrabold mb-2" style="color:#1E3A5F;">Wait! Don't Miss Out</h3>
+                <h3 class="text-xl font-extrabold mb-2" style="color:#218091;">Wait! Don't Miss Out</h3>
                 <p class="text-sm text-gray-600">
                     Get <span class="font-bold" style="color:#F97316;">10% off</span> on your first enrollment when you book a demo class today!
                 </p>

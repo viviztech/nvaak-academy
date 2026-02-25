@@ -81,7 +81,7 @@
                 <a href="/" class="flex items-center gap-2">
                     <img src="/logo.jpeg" alt="NVAAK Academy Logo" class="h-10 w-10 rounded-lg object-cover">
                     <div class="leading-tight">
-                        <span class="text-lg font-extrabold" style="color:#1E3A5F">NVAAK</span>
+                        <span class="text-lg font-extrabold" style="color:#218091">NVAAK</span>
                         <span class="text-xs text-gray-500 block -mt-1">IAS & NEET Academy</span>
                     </div>
                 </a>
@@ -149,7 +149,7 @@
     <main>@yield('content'){{ $slot ?? '' }}</main>
 
     {{-- ── Footer ─────────────────────────────────────────────────────── --}}
-    <footer style="background-color:#1E3A5F;" class="text-white mt-0">
+    <footer style="background-color:#218091;" class="text-white mt-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
 

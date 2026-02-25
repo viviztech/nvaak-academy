@@ -2,14 +2,14 @@
 @section('content')
 
     {{-- ── Page Hero ──────────────────────────────────────────────────────── --}}
-    <section class="py-16" style="background:linear-gradient(135deg,#1E3A5F 0%,#163050 60%,#0f2240 100%);">
+    <section class="py-16" style="background:linear-gradient(135deg,#218091 0%,#1a6b7a 60%,#145663 100%);">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4"
                   style="background:rgba(249,115,22,0.15); color:#F97316; border:1px solid rgba(249,115,22,0.3);">
                 Proven Results
             </span>
             <h1 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">Success Stories</h1>
-            <p class="text-lg text-blue-200 max-w-2xl mx-auto">
+            <p class="text-lg text-white/80 max-w-2xl mx-auto">
                 Real students, real results — see how NVAAK IAS & NEET Academy helped them achieve their dreams.
             </p>
         </div>
@@ -21,7 +21,7 @@
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
                 @foreach([['500+','Students Trained'],['85%','NEET Success Rate'],['300+','TNPSC Selections'],['4.8★','Average Rating']] as [$n,$l])
                 <div>
-                    <p class="text-3xl font-extrabold" style="color:#1E3A5F;">{{ $n }}</p>
+                    <p class="text-3xl font-extrabold" style="color:#218091;">{{ $n }}</p>
                     <p class="text-sm text-gray-500 mt-0.5">{{ $l }}</p>
                 </div>
                 @endforeach
@@ -74,10 +74,10 @@
     </section>
 
     {{-- ── CTA ─────────────────────────────────────────────────────────────── --}}
-    <section class="py-16" style="background:linear-gradient(135deg,#1E3A5F,#163050);">
+    <section class="py-16" style="background:linear-gradient(135deg,#218091,#1a6b7a);">
         <div class="max-w-3xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-extrabold text-white mb-3">Ready to Write Your Success Story?</h2>
-            <p class="text-blue-200 mb-8">Join hundreds of successful students at NVAAK IAS & NEET Academy.</p>
+            <p class="text-white/80 mb-8">Join hundreds of successful students at NVAAK IAS & NEET Academy.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-3">
                 <a href="{{ route('admission.apply') }}"
                    class="inline-flex items-center justify-center gap-2 px-8 py-3.5 text-base font-bold text-white rounded-xl shadow-md transition-opacity hover:opacity-90"

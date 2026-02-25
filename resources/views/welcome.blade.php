@@ -2,7 +2,7 @@
 @section('content')
 
     {{-- ── Hero Section ────────────────────────────────────────────────── --}}
-    <section class="relative overflow-hidden" style="background: linear-gradient(135deg,#1E3A5F 0%,#163050 60%,#0f2240 100%);">
+    <section class="relative overflow-hidden" style="background: linear-gradient(135deg,#218091 0%,#1a6b7a 60%,#145663 100%);">
         {{-- Decorative circles --}}
         <div class="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-5" style="background:#F97316; transform:translate(30%,-30%)"></div>
         <div class="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full opacity-5" style="background:#F97316; transform:translate(-30%,30%)"></div>
@@ -22,10 +22,10 @@
                         Your Dream<br>
                         <span style="color:#F97316;">Medical &</span><br>
                         Government Career<br>
-                        <span class="text-3xl sm:text-4xl font-bold text-blue-200">Starts Here</span>
+                        <span class="text-3xl sm:text-4xl font-bold text-white/80">Starts Here</span>
                     </h1>
 
-                    <p class="text-lg text-blue-200 mb-8 leading-relaxed max-w-xl">
+                    <p class="text-lg text-white/80 mb-8 leading-relaxed max-w-xl">
                         Expert NEET & TNPSC coaching in Avadi, Chennai. Live classes, 15+ expert faculty, and a proven track record of 500+ successful students.
                     </p>
 
@@ -46,7 +46,7 @@
                         @for($i = 0; $i < 5; $i++)
                             <svg class="h-4 w-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                         @endfor
-                        <span class="text-sm text-blue-200 ml-1">4.8/5 from 250+ student reviews</span>
+                        <span class="text-sm text-white/80 ml-1">4.8/5 from 250+ student reviews</span>
                     </div>
                 </div>
 
@@ -63,7 +63,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="{{ $icon }}"/>
                         </svg>
                         <p class="text-3xl font-extrabold text-white">{{ $number }}</p>
-                        <p class="text-sm text-blue-200 mt-1">{{ $label }}</p>
+                        <p class="text-sm text-white/80 mt-1">{{ $label }}</p>
                     </div>
                     @endforeach
                 </div>
@@ -77,8 +77,8 @@
             <div class="flex flex-wrap items-center justify-center gap-8 text-sm font-medium text-gray-700">
                 @foreach([
                     ['✓ 100% Secure Admission', '#F97316'],
-                    ['✓ Money-Back Guarantee', '#1E3A5F'],
-                    ['✓ Hybrid Learning (Online + Centre)', '#1E3A5F'],
+                    ['✓ Money-Back Guarantee', '#218091'],
+                    ['✓ Hybrid Learning (Online + Centre)', '#218091'],
                     ['✓ 24/7 Doubt Clearing', '#F97316'],
                 ] as [$text, $color])
                     <span style="color:{{ $color }}">{{ $text }}</span>
@@ -92,7 +92,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14">
                 <span class="text-sm font-semibold uppercase tracking-widest" style="color:#F97316;">Our Programs</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2" style="color:#1E3A5F;">Courses Designed to Get You Selected</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2" style="color:#218091;">Courses Designed to Get You Selected</h2>
                 <p class="text-gray-500 mt-3 max-w-2xl mx-auto">Comprehensive coaching programs built around the latest exam patterns, with expert faculty and personalised attention.</p>
             </div>
 
@@ -100,7 +100,7 @@
 
                 {{-- NEET Card --}}
                 <div class="rounded-2xl border-2 border-gray-100 hover:border-orange-300 overflow-hidden shadow-sm hover:shadow-lg transition-all group">
-                    <div class="p-1" style="background:linear-gradient(90deg,#1E3A5F,#2a4f7a);">
+                    <div class="p-1" style="background:linear-gradient(90deg,#218091,#145663);">
                         <div class="flex items-center gap-3 px-5 py-3">
                             <span class="text-2xl">🩺</span>
                             <span class="text-white font-bold text-lg">NEET Coaching</span>
@@ -172,7 +172,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14">
                 <span class="text-sm font-semibold uppercase tracking-widest" style="color:#F97316;">Simple Process</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2" style="color:#1E3A5F;">Your Journey to Success in 4 Simple Steps</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2" style="color:#218091;">Your Journey to Success in 4 Simple Steps</h2>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 @foreach([
@@ -183,7 +183,7 @@
                 ] as [$step, $title, $desc])
                 <div class="text-center relative">
                     <div class="h-16 w-16 rounded-full flex items-center justify-center text-2xl font-extrabold text-white mx-auto mb-5"
-                         style="background-color:#1E3A5F;">{{ $step }}</div>
+                         style="background-color:#218091;">{{ $step }}</div>
                     <h3 class="font-bold text-gray-900 mb-2">{{ $title }}</h3>
                     <p class="text-sm text-gray-500 leading-relaxed">{{ $desc }}</p>
                 </div>
@@ -197,7 +197,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14">
                 <span class="text-sm font-semibold uppercase tracking-widest" style="color:#F97316;">Why Choose Us</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2" style="color:#1E3A5F;">Everything You Need to Succeed</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2" style="color:#218091;">Everything You Need to Succeed</h2>
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -226,7 +226,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <span class="text-sm font-semibold uppercase tracking-widest" style="color:#F97316;">Platform Features</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2" style="color:#1E3A5F;">Everything You Need to Succeed</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2" style="color:#218091;">Everything You Need to Succeed</h2>
             </div>
             <div x-data="{ tab: 'live' }">
                 {{-- Tab Nav --}}
@@ -239,7 +239,7 @@
                     ] as [$key, $emoji, $label])
                     <button @click="tab = '{{ $key }}'"
                             :class="tab === '{{ $key }}' ? 'text-white' : 'bg-white text-gray-700 border border-gray-200'"
-                            :style="tab === '{{ $key }}' ? 'background-color:#1E3A5F;' : ''"
+                            :style="tab === '{{ $key }}' ? 'background-color:#218091;' : ''"
                             class="px-5 py-2.5 rounded-xl text-sm font-semibold transition-all">
                         {{ $emoji }} {{ $label }}
                     </button>
@@ -249,7 +249,7 @@
                 {{-- Live Classes --}}
                 <div x-show="tab === 'live'" x-transition class="grid md:grid-cols-2 gap-10 items-center bg-gray-50 rounded-2xl p-8 border border-gray-100">
                     <div>
-                        <h3 class="text-2xl font-bold mb-5" style="color:#1E3A5F;">Interactive Live Online Classes</h3>
+                        <h3 class="text-2xl font-bold mb-5" style="color:#218091;">Interactive Live Online Classes</h3>
                         <ul class="space-y-3">
                             @foreach(['Two-way audio/video interaction with faculty','Real-time doubt resolution during class','Screen sharing and digital whiteboard','Automatic attendance tracking','Class recordings available 24/7'] as $f)
                             <li class="flex items-start gap-2 text-sm text-gray-700">
@@ -262,13 +262,13 @@
                             Try Free Demo Class →
                         </a>
                     </div>
-                    <div class="rounded-2xl flex items-center justify-center h-52 text-6xl" style="background:linear-gradient(135deg,#1E3A5F,#163050);">📹</div>
+                    <div class="rounded-2xl flex items-center justify-center h-52 text-6xl" style="background:linear-gradient(135deg,#218091,#1a6b7a);">📹</div>
                 </div>
 
                 {{-- Mock Tests --}}
                 <div x-show="tab === 'tests'" x-transition class="grid md:grid-cols-2 gap-10 items-center bg-gray-50 rounded-2xl p-8 border border-gray-100">
                     <div>
-                        <h3 class="text-2xl font-bold mb-5" style="color:#1E3A5F;">Comprehensive Mock Tests</h3>
+                        <h3 class="text-2xl font-bold mb-5" style="color:#218091;">Comprehensive Mock Tests</h3>
                         <ul class="space-y-3">
                             @foreach(['1000+ practice questions in question bank','Previous year NEET & TNPSC papers','Detailed subject-wise performance analysis','Time-bound exam simulation with NEET pattern','Instant results with answer explanations'] as $f)
                             <li class="flex items-start gap-2 text-sm text-gray-700">
@@ -287,7 +287,7 @@
                 {{-- Study Materials --}}
                 <div x-show="tab === 'materials'" x-transition class="grid md:grid-cols-2 gap-10 items-center bg-gray-50 rounded-2xl p-8 border border-gray-100">
                     <div>
-                        <h3 class="text-2xl font-bold mb-5" style="color:#1E3A5F;">Complete Study Materials</h3>
+                        <h3 class="text-2xl font-bold mb-5" style="color:#218091;">Complete Study Materials</h3>
                         <ul class="space-y-3">
                             @foreach(['Digital PDFs and chapter-wise notes','Video lecture library accessible anytime','Printed materials available at centre','Updated annually with latest exam patterns','Mobile app access for offline study'] as $f)
                             <li class="flex items-start gap-2 text-sm text-gray-700">
@@ -306,7 +306,7 @@
                 {{-- Doubt Clearing --}}
                 <div x-show="tab === 'doubts'" x-transition class="grid md:grid-cols-2 gap-10 items-center bg-gray-50 rounded-2xl p-8 border border-gray-100">
                     <div>
-                        <h3 class="text-2xl font-bold mb-5" style="color:#1E3A5F;">24/7 Doubt Clearing</h3>
+                        <h3 class="text-2xl font-bold mb-5" style="color:#218091;">24/7 Doubt Clearing</h3>
                         <ul class="space-y-3">
                             @foreach(['Dedicated daily doubt-clearing sessions','One-on-one support from subject experts','Quick response via WhatsApp & platform','Video explanations for complex topics','Subject-wise expert faculty assigned'] as $f)
                             <li class="flex items-start gap-2 text-sm text-gray-700">
@@ -330,7 +330,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14">
                 <span class="text-sm font-semibold uppercase tracking-widest" style="color:#F97316;">Our Team</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2" style="color:#1E3A5F;">Learn from the Best</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2" style="color:#218091;">Learn from the Best</h2>
                 <p class="text-gray-500 mt-3">Subject matter experts with years of teaching and examination experience.</p>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -352,7 +352,7 @@
             </div>
             <div class="text-center mt-10">
                 <a href="{{ route('faculty') }}" class="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold rounded-xl border-2 transition-colors hover:bg-white"
-                   style="border-color:#1E3A5F; color:#1E3A5F;">
+                   style="border-color:#218091; color:#218091;">
                     Meet All Faculty →
                 </a>
             </div>
@@ -364,7 +364,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14">
                 <span class="text-sm font-semibold uppercase tracking-widest" style="color:#F97316;">Fee Structure</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2" style="color:#1E3A5F;">Flexible Plans for Every Student</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2" style="color:#218091;">Flexible Plans for Every Student</h2>
                 <p class="text-gray-500 mt-3">Quality coaching at prices that won't burden your family. EMI available on all plans.</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
@@ -380,9 +380,9 @@
                     @if($badge)
                     <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 text-xs font-bold text-white rounded-full" style="background-color:#F97316;">{{ $badge }}</span>
                     @endif
-                    <h3 class="text-xl font-bold mb-4" style="color:#1E3A5F;">{{ $title }}</h3>
+                    <h3 class="text-xl font-bold mb-4" style="color:#218091;">{{ $title }}</h3>
                     <div class="mb-6">
-                        <span class="text-4xl font-extrabold" style="color:#1E3A5F;">{{ $price }}</span>
+                        <span class="text-4xl font-extrabold" style="color:#218091;">{{ $price }}</span>
                         <span class="text-base text-gray-500">{{ $unit }}</span>
                     </div>
                     <ul class="space-y-2.5 mb-8">
@@ -395,7 +395,7 @@
                     </ul>
                     <a href="{{ route('admission.apply') }}"
                        class="block w-full py-3 text-center text-sm font-bold text-white rounded-xl transition-opacity hover:opacity-90"
-                       style="background-color:{{ $badge ? '#F97316' : '#1E3A5F' }};">
+                       style="background-color:{{ $badge ? '#F97316' : '#218091' }};">
                         Enroll Now →
                     </a>
                     <p class="text-center text-xs text-gray-400 mt-3">💳 EMI from {{ $emi }}</p>
@@ -411,12 +411,12 @@
     </section>
 
     {{-- ── Results / Success Stories ────────────────────────────────────── --}}
-    <section id="results" style="background:linear-gradient(135deg,#1E3A5F,#163050);" class="py-20">
+    <section id="results" style="background:linear-gradient(135deg,#218091,#1a6b7a);" class="py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14">
                 <span class="text-sm font-semibold uppercase tracking-widest text-orange-400">Proven Results</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Our Students' Success Stories</h2>
-                <p class="text-blue-200 mt-3">Real students, real results. Here's what NVAAK IAS & NEET Academy has achieved.</p>
+                <p class="text-white/80 mt-3">Real students, real results. Here's what NVAAK IAS & NEET Academy has achieved.</p>
             </div>
 
             {{-- Stats row --}}
@@ -429,7 +429,7 @@
                 ] as [$num, $lbl])
                 <div class="text-center">
                     <p class="text-4xl font-extrabold text-white">{{ $num }}</p>
-                    <p class="text-sm text-blue-200 mt-1">{{ $lbl }}</p>
+                    <p class="text-sm text-white/80 mt-1">{{ $lbl }}</p>
                 </div>
                 @endforeach
             </div>
@@ -442,7 +442,7 @@
                     </div>
                     <p class="text-white font-semibold text-lg mb-1">Priya Sharma</p>
                     <p class="text-orange-400 text-sm font-bold mb-3">NEET 2025 – AIR 245 · Madras Medical College</p>
-                    <p class="text-blue-100 text-sm leading-relaxed">
+                    <p class="text-white/80 text-sm leading-relaxed">
                         "NVAAK IAS & NEET Academy's structured approach and dedicated faculty helped me crack NEET in my first attempt. The mock tests and doubt sessions were game-changers for me."
                     </p>
                 </div>
@@ -453,7 +453,7 @@
                     </div>
                     <p class="text-white font-semibold text-lg mb-1">Rajesh Kumar</p>
                     <p class="text-orange-400 text-sm font-bold mb-3">TNPSC Group 1 – Selected</p>
-                    <p class="text-blue-100 text-sm leading-relaxed">
+                    <p class="text-white/80 text-sm leading-relaxed">
                         "The TNPSC programme at NVAAK is incredibly well-structured. The daily current affairs and previous year analysis gave me the edge I needed to clear Group 1."
                     </p>
                 </div>
@@ -464,7 +464,7 @@
     {{-- ── CTA / Enroll Banner ──────────────────────────────────────────── --}}
     <section class="py-16 bg-orange-50 border-y border-orange-100">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold mb-4" style="color:#1E3A5F;">
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-4" style="color:#218091;">
                 Limited Seats for 2026 Batch
             </h2>
             <p class="text-gray-600 mb-2">Enroll before <strong>December 31</strong> and get 10% off on your first enrollment.</p>
@@ -478,7 +478,7 @@
                 </a>
                 <a href="tel:+919940528779"
                    class="inline-flex items-center justify-center gap-2 px-8 py-3.5 text-base font-semibold rounded-xl border-2 transition-colors"
-                   style="border-color:#1E3A5F; color:#1E3A5F;">
+                   style="border-color:#218091; color:#218091;">
                     <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                     Call +91 99405 28779
                 </a>
@@ -491,7 +491,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14">
                 <span class="text-sm font-semibold uppercase tracking-widest" style="color:#F97316;">Get In Touch</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2" style="color:#1E3A5F;">Visit Our Centre</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2" style="color:#218091;">Visit Our Centre</h2>
                 <p class="text-gray-500 mt-3">We're located in the heart of Avadi, Chennai — easy to reach by road and rail.</p>
             </div>
 
@@ -511,7 +511,7 @@
                         <div>
                             <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-0.5">{{ $label }}</p>
                             @if($link)
-                                <a href="{{ $link }}" class="text-sm font-semibold hover:underline" style="color:#1E3A5F;" target="{{ str_starts_with($link, 'http') ? '_blank' : '_self' }}">{{ $value }}</a>
+                                <a href="{{ $link }}" class="text-sm font-semibold hover:underline" style="color:#218091;" target="{{ str_starts_with($link, 'http') ? '_blank' : '_self' }}">{{ $value }}</a>
                             @else
                                 <p class="text-sm font-semibold text-gray-800">{{ $value }}</p>
                             @endif

@@ -11,7 +11,7 @@
         <div class="p-8">
             <div class="text-center mb-6">
                 <div class="text-5xl mb-3">🎓</div>
-                <h3 class="text-xl font-extrabold mb-2" style="color:#1E3A5F;">Welcome to NVAAK Academy!</h3>
+                <h3 class="text-xl font-extrabold mb-2" style="color:#218091;">Welcome to NVAAK Academy!</h3>
                 <p class="text-sm text-gray-600 mb-3">Start your journey to success with our expert NEET & TNPSC coaching.</p>
                 <div class="rounded-xl p-3 text-sm" style="background:#FFF7ED;">
                     <strong>Special Offer:</strong> Book a free demo class and get <span class="font-bold" style="color:#F97316;">10% off</span> on enrollment!
@@ -26,7 +26,7 @@
                        class="w-full px-4 py-2.5 text-sm border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-200">
                 <button @click="submitForm"
                         class="w-full py-3 text-sm font-bold text-white rounded-xl transition-opacity hover:opacity-90"
-                        style="background-color:#1E3A5F;">
+                        style="background-color:#218091;">
                     Get Started →
                 </button>
                 <p class="text-xs text-center text-gray-400">By submitting, you agree to receive communications from us.</p>

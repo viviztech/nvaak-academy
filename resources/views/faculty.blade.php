@@ -2,14 +2,14 @@
 @section('content')
 
     {{-- ── Page Hero ──────────────────────────────────────────────────────── --}}
-    <section class="py-16" style="background:linear-gradient(135deg,#1E3A5F 0%,#163050 60%,#0f2240 100%);">
+    <section class="py-16" style="background:linear-gradient(135deg,#218091 0%,#1a6b7a 60%,#145663 100%);">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4"
                   style="background:rgba(249,115,22,0.15); color:#F97316; border:1px solid rgba(249,115,22,0.3);">
                 Expert Mentors
             </span>
             <h1 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">Our Expert Faculty</h1>
-            <p class="text-lg text-blue-200 max-w-2xl mx-auto">
+            <p class="text-lg text-white/80 max-w-2xl mx-auto">
                 Learn from experienced educators and subject matter experts who have cracked these exams themselves.
             </p>
         </div>
@@ -21,7 +21,7 @@
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 @foreach([
-                    ['Dr. Rajesh Kumar',  'Physics Expert',   'MBBS',        '12+ Years', '500+ NEET Selections',  '#1E3A5F', '👨‍🏫',
+                    ['Dr. Rajesh Kumar',  'Physics Expert',   'MBBS',        '12+ Years', '500+ NEET Selections',  '#218091', '👨‍🏫',
                      'Dr. Rajesh Kumar is one of the most sought-after physics teachers in Avadi. His unique problem-solving methods and ability to simplify complex concepts have helped hundreds of students ace NEET Physics.'],
                     ['Dr. Priya Menon',   'Chemistry Expert', 'MD',          '10+ Years', '400+ NEET Selections',  '#2d6a4f', '👩‍🏫',
                      'With a background in medicine and a passion for teaching, Dr. Priya Menon makes Organic and Inorganic Chemistry approachable and even enjoyable for NEET aspirants.'],
@@ -60,7 +60,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14">
                 <span class="text-sm font-semibold uppercase tracking-widest" style="color:#F97316;">Our Approach</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2" style="color:#1E3A5F;">How Our Faculty Teaches</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2" style="color:#218091;">How Our Faculty Teaches</h2>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 @foreach([
@@ -80,10 +80,10 @@
     </section>
 
     {{-- ── CTA ─────────────────────────────────────────────────────────────── --}}
-    <section class="py-16" style="background:linear-gradient(135deg,#1E3A5F,#163050);">
+    <section class="py-16" style="background:linear-gradient(135deg,#218091,#1a6b7a);">
         <div class="max-w-3xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-extrabold text-white mb-3">Want to Learn from Our Expert Faculty?</h2>
-            <p class="text-blue-200 mb-8">Book a free demo class and experience our teaching methodology firsthand.</p>
+            <p class="text-white/80 mb-8">Book a free demo class and experience our teaching methodology firsthand.</p>
             <a href="{{ route('admission.apply') }}"
                class="inline-flex items-center justify-center gap-2 px-8 py-3.5 text-base font-bold text-white rounded-xl shadow-md transition-opacity hover:opacity-90"
                style="background-color:#F97316;">
