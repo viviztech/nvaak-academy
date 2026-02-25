@@ -28,6 +28,7 @@ export default {
                     'teal-500':    '#218091',
                     'teal-600':    '#1a6b7a',
                     'teal-700':    '#145663',
+                    'teal-800':    '#0f4450',
                     'cream':       '#fcfcf9',
                     'cream-50':    '#fcfcf9',
                 },

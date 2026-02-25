@@ -3,7 +3,7 @@
 
         {{-- Page Header --}}
         <div class="text-center mb-8">
-            <h1 class="text-2xl sm:text-3xl font-extrabold" style="color:#1E3A5F;">Admission Application</h1>
+            <h1 class="text-2xl sm:text-3xl font-extrabold" style="color:#218091;">Admission Application</h1>
             <p class="text-gray-500 mt-1 text-sm">NVAAK IAS & NEET Academy · Avadi, Chennai</p>
         </div>
 
@@ -19,7 +19,7 @@
             <div class="flex items-center justify-between relative">
                 {{-- connecting line --}}
                 <div class="absolute left-0 right-0 top-4 h-0.5 bg-gray-200 z-0"></div>
-                <div class="absolute left-0 top-4 h-0.5 bg-orange-400 z-0 transition-all duration-500"
+                <div class="absolute left-0 top-4 h-0.5 bg-nvaak-teal z-0 transition-all duration-500"
                      style="width: {{ (($currentStep - 1) / ($totalSteps - 1)) * 100 }}%"></div>
 
                 @foreach([
@@ -33,12 +33,12 @@
                     <button wire:click="goToStep({{ $step }})"
                             @class([
                                 'h-8 w-8 rounded-full flex items-center justify-center text-xs font-bold border-2 transition-all',
-                                'text-white border-orange-400' => $currentStep > $step,
-                                'text-white border-orange-500' => $currentStep === $step,
+                                'text-white border-nvaak-teal' => $currentStep > $step,
+                                'text-white border-nvaak-teal' => $currentStep === $step,
                                 'text-gray-400 bg-white border-gray-300' => $currentStep < $step,
                             ])
                             @style([
-                                'background-color:#F97316' => $currentStep >= $step,
+                                'background-color:#218091' => $currentStep >= $step,
                             ])>
                         @if($currentStep > $step)
                             <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
@@ -46,7 +46,7 @@
                             {{ $step }}
                         @endif
                     </button>
-                    <span class="mt-1.5 text-xs font-medium {{ $currentStep === $step ? 'text-orange-600' : 'text-gray-400' }}">{{ $label }}</span>
+                    <span class="mt-1.5 text-xs font-medium {{ $currentStep === $step ? 'text-nvaak-teal' : 'text-gray-400' }}">{{ $label }}</span>
                 </div>
                 @endforeach
             </div>
@@ -59,9 +59,9 @@
                  STEP 1: Personal Information
             ══════════════════════════════════════════════════════════ --}}
             @if($currentStep === 1)
-            <div class="px-6 py-5 border-b border-gray-100" style="background:linear-gradient(90deg,#1E3A5F,#2a4f7a);">
+            <div class="px-6 py-5 border-b border-gray-100" style="background:linear-gradient(90deg,#218091,#145663);">
                 <h2 class="text-base font-bold text-white">Step 1 — Personal Information</h2>
-                <p class="text-blue-200 text-xs mt-0.5">Basic personal and contact details</p>
+                <p class="text-white/70 text-xs mt-0.5">Basic personal and contact details</p>
             </div>
             <div class="p-6 space-y-5">
 
@@ -70,18 +70,18 @@
                     <div>
                         <label class="block text-xs font-semibold text-gray-600 mb-1">First Name *</label>
                         <input wire:model="first_name" type="text" placeholder="First name"
-                               class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                               class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                         @error('first_name') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-gray-600 mb-1">Middle Name</label>
                         <input wire:model="middle_name" type="text" placeholder="Middle name"
-                               class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                               class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-gray-600 mb-1">Last Name *</label>
                         <input wire:model="last_name" type="text" placeholder="Last name"
-                               class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                               class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                         @error('last_name') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
                     </div>
                 </div>
@@ -91,13 +91,13 @@
                     <div>
                         <label class="block text-xs font-semibold text-gray-600 mb-1">Date of Birth *</label>
                         <input wire:model="date_of_birth" type="date"
-                               class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                               class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                         @error('date_of_birth') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-gray-600 mb-1">Gender *</label>
                         <select wire:model="gender"
-                                class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                                class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                             <option value="">Select</option>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
@@ -108,7 +108,7 @@
                     <div>
                         <label class="block text-xs font-semibold text-gray-600 mb-1">Blood Group</label>
                         <select wire:model="blood_group"
-                                class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                                class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                             <option value="">Select</option>
                             @foreach(['A+','A-','B+','B-','AB+','AB-','O+','O-'] as $bg)
                                 <option value="{{ $bg }}">{{ $bg }}</option>
@@ -122,20 +122,20 @@
                     <div>
                         <label class="block text-xs font-semibold text-gray-600 mb-1">Phone Number *</label>
                         <input wire:model="phone" type="tel" placeholder="+91 XXXXX XXXXX"
-                               class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                               class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                         @error('phone') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-gray-600 mb-1">Alternate Phone</label>
                         <input wire:model="alternate_phone" type="tel" placeholder="Alternate number"
-                               class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                               class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                     </div>
                 </div>
 
                 <div>
                     <label class="block text-xs font-semibold text-gray-600 mb-1">Email Address</label>
                     <input wire:model="email" type="email" placeholder="your@email.com"
-                           class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                           class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                     @error('email') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
                 </div>
 
@@ -143,7 +143,7 @@
                 <div>
                     <label class="block text-xs font-semibold text-gray-600 mb-1">Aadhaar Number</label>
                     <input wire:model="aadhaar_number" type="text" placeholder="XXXX XXXX XXXX"
-                           class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                           class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                 </div>
 
                 {{-- Address --}}
@@ -151,12 +151,12 @@
                     <div>
                         <label class="block text-xs font-semibold text-gray-600 mb-1">Current Address</label>
                         <textarea wire:model="current_address" rows="2" placeholder="Current address"
-                                  class="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300 resize-none"></textarea>
+                                  class="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100 resize-none"></textarea>
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-gray-600 mb-1">Permanent Address</label>
                         <textarea wire:model="permanent_address" rows="2" placeholder="Permanent address"
-                                  class="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300 resize-none"></textarea>
+                                  class="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100 resize-none"></textarea>
                     </div>
                 </div>
 
@@ -164,17 +164,17 @@
                     <div>
                         <label class="block text-xs font-semibold text-gray-600 mb-1">City</label>
                         <input wire:model="city" type="text" placeholder="City"
-                               class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                               class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-gray-600 mb-1">State</label>
                         <input wire:model="state" type="text" placeholder="State"
-                               class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                               class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-gray-600 mb-1">Postal Code</label>
                         <input wire:model="postal_code" type="text" placeholder="600XXX"
-                               class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                               class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                     </div>
                 </div>
 
@@ -182,12 +182,12 @@
                     <div>
                         <label class="block text-xs font-semibold text-gray-600 mb-1">Religion</label>
                         <input wire:model="religion" type="text" placeholder="Religion"
-                               class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                               class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-gray-600 mb-1">Caste Category</label>
                         <select wire:model="caste_category"
-                                class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                                class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                             <option value="">Select</option>
                             <option value="general">General</option>
                             <option value="obc">OBC</option>
@@ -204,9 +204,9 @@
                  STEP 2: Academic Background
             ══════════════════════════════════════════════════════════ --}}
             @if($currentStep === 2)
-            <div class="px-6 py-5 border-b border-gray-100" style="background:linear-gradient(90deg,#1E3A5F,#2a4f7a);">
+            <div class="px-6 py-5 border-b border-gray-100" style="background:linear-gradient(90deg,#218091,#145663);">
                 <h2 class="text-base font-bold text-white">Step 2 — Academic Background</h2>
-                <p class="text-blue-200 text-xs mt-0.5">Course preference and academic history</p>
+                <p class="text-white/70 text-xs mt-0.5">Course preference and academic history</p>
             </div>
             <div class="p-6 space-y-5">
 
@@ -216,7 +216,7 @@
                     <div class="flex flex-wrap gap-3">
                         @foreach(['neet' => 'NEET (Medical)', 'ias' => 'IAS / TNPSC', 'both' => 'Both'] as $val => $lbl)
                         <label class="flex items-center gap-2 px-4 py-2.5 border rounded-xl cursor-pointer text-sm transition-colors
-                                      {{ $course_applied === $val ? 'border-orange-400 bg-orange-50 text-orange-700 font-medium' : 'border-gray-200 text-gray-600 hover:border-gray-300' }}">
+                                      {{ $course_applied === $val ? 'border-nvaak-teal bg-nvaak-teal-50 text-nvaak-teal-700 font-medium' : 'border-gray-200 text-gray-600 hover:border-gray-300' }}">
                             <input type="radio" wire:model.live="course_applied" value="{{ $val }}" class="sr-only">
                             {{ $lbl }}
                         </label>
@@ -228,20 +228,20 @@
                 <div>
                     <label class="block text-xs font-semibold text-gray-600 mb-1">Current School / College</label>
                     <input wire:model="current_school_college" type="text" placeholder="Name of current institution"
-                           class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                           class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                 </div>
 
                 <div>
                     <label class="block text-xs font-semibold text-gray-600 mb-1">Previous Institution</label>
                     <input wire:model="previous_institution" type="text" placeholder="School/college name"
-                           class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                           class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     <div>
                         <label class="block text-xs font-semibold text-gray-600 mb-1">Board</label>
                         <select wire:model="board"
-                                class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                                class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                             <option value="">Select board</option>
                             <option value="cbse">CBSE</option>
                             <option value="icse">ICSE</option>
@@ -252,31 +252,31 @@
                     <div>
                         <label class="block text-xs font-semibold text-gray-600 mb-1">Percentage / CGPA</label>
                         <input wire:model="previous_percentage" type="number" step="0.01" min="0" max="100" placeholder="e.g. 85.5"
-                               class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                               class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                         @error('previous_percentage') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-gray-600 mb-1">Year of Passing</label>
                         <input wire:model="year_of_passing" type="number" min="2000" max="{{ date('Y') + 1 }}" placeholder="e.g. 2024"
-                               class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                               class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                         @error('year_of_passing') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
                     </div>
                 </div>
 
                 @if(in_array($course_applied, ['neet', 'both']))
-                <div class="p-4 bg-blue-50 rounded-xl border border-blue-100 space-y-4">
-                    <p class="text-xs font-semibold text-blue-700 uppercase tracking-wider">Previous NEET Attempt (if any)</p>
+                <div class="p-4 bg-nvaak-teal-50 rounded-xl border border-nvaak-teal-100 space-y-4">
+                    <p class="text-xs font-semibold text-nvaak-teal-700 uppercase tracking-wider">Previous NEET Attempt (if any)</p>
                     <div class="grid grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-semibold text-gray-600 mb-1">NEET Score</label>
                             <input wire:model="neet_previous_score" type="number" min="0" max="720" placeholder="Out of 720"
-                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                             @error('neet_previous_score') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-gray-600 mb-1">NEET Rank</label>
                             <input wire:model="neet_previous_rank" type="number" min="1" placeholder="All India Rank"
-                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                             @error('neet_previous_rank') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
                         </div>
                     </div>
@@ -289,9 +289,9 @@
                  STEP 3: Guardian Information
             ══════════════════════════════════════════════════════════ --}}
             @if($currentStep === 3)
-            <div class="px-6 py-5 border-b border-gray-100" style="background:linear-gradient(90deg,#1E3A5F,#2a4f7a);">
+            <div class="px-6 py-5 border-b border-gray-100" style="background:linear-gradient(90deg,#218091,#145663);">
                 <h2 class="text-base font-bold text-white">Step 3 — Guardian Information</h2>
-                <p class="text-blue-200 text-xs mt-0.5">Parent / guardian contact details</p>
+                <p class="text-white/70 text-xs mt-0.5">Parent / guardian contact details</p>
             </div>
             <div class="p-6 space-y-6">
 
@@ -302,30 +302,30 @@
                         <div>
                             <label class="block text-xs font-semibold text-gray-600 mb-1">Father's Name *</label>
                             <input wire:model="father_name" type="text" placeholder="Full name"
-                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                             @error('father_name') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-gray-600 mb-1">Occupation</label>
                             <input wire:model="father_occupation" type="text" placeholder="Occupation"
-                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-gray-600 mb-1">Phone *</label>
                             <input wire:model="father_phone" type="tel" placeholder="+91 XXXXX XXXXX"
-                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                             @error('father_phone') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-gray-600 mb-1">Email</label>
                             <input wire:model="father_email" type="email" placeholder="father@email.com"
-                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                             @error('father_email') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-gray-600 mb-1">Annual Income</label>
                             <input wire:model="father_income" type="text" placeholder="e.g. ₹5,00,000"
-                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                         </div>
                     </div>
                 </div>
@@ -337,22 +337,22 @@
                         <div>
                             <label class="block text-xs font-semibold text-gray-600 mb-1">Mother's Name</label>
                             <input wire:model="mother_name" type="text" placeholder="Full name"
-                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-gray-600 mb-1">Occupation</label>
                             <input wire:model="mother_occupation" type="text" placeholder="Occupation"
-                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-gray-600 mb-1">Phone</label>
                             <input wire:model="mother_phone" type="tel" placeholder="+91 XXXXX XXXXX"
-                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-gray-600 mb-1">Email</label>
                             <input wire:model="mother_email" type="email" placeholder="mother@email.com"
-                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                         </div>
                     </div>
                 </div>
@@ -364,17 +364,17 @@
                         <div>
                             <label class="block text-xs font-semibold text-gray-600 mb-1">Guardian Name</label>
                             <input wire:model="guardian_name" type="text" placeholder="Full name"
-                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-gray-600 mb-1">Relation</label>
                             <input wire:model="guardian_relation" type="text" placeholder="e.g. Uncle"
-                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-gray-600 mb-1">Phone</label>
                             <input wire:model="guardian_phone" type="tel" placeholder="+91 XXXXX XXXXX"
-                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-300">
+                                   class="w-full px-3 py-2.5 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-nvaak-teal-100">
                         </div>
                     </div>
                 </div>
@@ -385,9 +385,9 @@
                  STEP 4: Documents Upload
             ══════════════════════════════════════════════════════════ --}}
             @if($currentStep === 4)
-            <div class="px-6 py-5 border-b border-gray-100" style="background:linear-gradient(90deg,#1E3A5F,#2a4f7a);">
+            <div class="px-6 py-5 border-b border-gray-100" style="background:linear-gradient(90deg,#218091,#145663);">
                 <h2 class="text-base font-bold text-white">Step 4 — Document Upload</h2>
-                <p class="text-blue-200 text-xs mt-0.5">Upload required documents (JPG, PNG or PDF · max 4 MB each)</p>
+                <p class="text-white/70 text-xs mt-0.5">Upload required documents (JPG, PNG or PDF · max 4 MB each)</p>
             </div>
             <div class="p-6 space-y-5">
 
@@ -398,11 +398,11 @@
                 ] as [$field, $label, $hint, $type])
                 <div>
                     <label class="block text-xs font-semibold text-gray-600 mb-1">{{ $label }}</label>
-                    <div class="border-2 border-dashed border-gray-200 rounded-xl p-4 hover:border-orange-300 transition-colors">
+                    <div class="border-2 border-dashed border-gray-200 rounded-xl p-4 hover:border-nvaak-teal transition-colors">
                         <input wire:model="{{ $field }}" type="file"
                                {{ $type === 'image' ? 'accept="image/*"' : 'accept=".pdf,.jpg,.jpeg,.png"' }}
                                class="w-full text-sm text-gray-500 file:mr-3 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:text-white file:cursor-pointer"
-                               style="--tw-file-selector-button-bg: #F97316">
+                               style="--tw-file-selector-button-bg: #218091">
                         <p class="text-xs text-gray-400 mt-1">{{ $hint }}</p>
                         @if($this->$field)
                             <p class="text-xs text-green-600 mt-1 font-medium">✓ File selected</p>
@@ -428,9 +428,9 @@
                  STEP 5: Review & Submit
             ══════════════════════════════════════════════════════════ --}}
             @if($currentStep === 5)
-            <div class="px-6 py-5 border-b border-gray-100" style="background:linear-gradient(90deg,#1E3A5F,#2a4f7a);">
+            <div class="px-6 py-5 border-b border-gray-100" style="background:linear-gradient(90deg,#218091,#145663);">
                 <h2 class="text-base font-bold text-white">Step 5 — Review & Submit</h2>
-                <p class="text-blue-200 text-xs mt-0.5">Please review your details before submitting</p>
+                <p class="text-white/70 text-xs mt-0.5">Please review your details before submitting</p>
             </div>
             <div class="p-6 space-y-5">
 
@@ -461,7 +461,7 @@
                     <div class="flex items-center justify-between px-4 py-2.5 bg-gray-50">
                         <span class="text-xs font-bold text-gray-600 uppercase tracking-wider">{{ $section }}</span>
                         <button wire:click="goToStep({{ $loop->index + 1 }})"
-                                class="text-xs font-semibold hover:underline" style="color:#F97316;">Edit</button>
+                                class="text-xs font-semibold hover:underline" style="color:#218091;">Edit</button>
                     </div>
                     <div class="divide-y divide-gray-50">
                         @foreach($rows as [$label, $value])
@@ -475,7 +475,7 @@
                 @endforeach
 
                 {{-- Declaration --}}
-                <div class="p-4 bg-blue-50 border border-blue-100 rounded-xl text-xs text-blue-800 leading-relaxed">
+                <div class="p-4 bg-nvaak-teal-50 border border-nvaak-teal-100 rounded-xl text-xs text-nvaak-teal-800 leading-relaxed">
                     By submitting this application, I confirm that all information provided is accurate and complete. I understand that providing false information may result in cancellation of my application.
                 </div>
             </div>
@@ -503,7 +503,7 @@
                     <button wire:click="nextStep"
                             wire:loading.attr="disabled"
                             class="inline-flex items-center gap-1.5 px-5 py-2.5 text-sm font-bold text-white rounded-lg shadow-sm transition-opacity disabled:opacity-60"
-                            style="background-color:#F97316;">
+                            style="background-color:#218091;">
                         <span wire:loading.remove>Continue</span>
                         <span wire:loading>Please wait...</span>
                         <svg wire:loading.remove class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
@@ -512,7 +512,7 @@
                     <button wire:click="submit"
                             wire:loading.attr="disabled"
                             class="inline-flex items-center gap-1.5 px-6 py-2.5 text-sm font-bold text-white rounded-lg shadow-sm transition-opacity disabled:opacity-60"
-                            style="background-color:#1E3A5F;">
+                            style="background-color:#218091;">
                         <span wire:loading.remove>Submit Application</span>
                         <span wire:loading>Submitting...</span>
                     </button>
@@ -525,7 +525,7 @@
         {{-- Help text --}}
         <p class="text-center text-xs text-gray-400 mt-6">
             Need help? Call us at
-            <a href="tel:+919940528779" class="text-orange-500 font-semibold">+91 99405 28779</a>
+            <a href="tel:+919940528779" class="text-nvaak-teal font-semibold">+91 99405 28779</a>
             or WhatsApp us.
         </p>
 
