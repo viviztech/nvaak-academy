@@ -90,7 +90,6 @@
                 <div class="hidden md:flex items-center gap-6">
                     <a href="{{ route('home') }}" class="text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors">Home</a>
                     <a href="{{ route('about') }}" class="text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors">About</a>
-                    <a href="{{ route('faculty') }}" class="text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors">Faculty</a>
                     <a href="{{ route('testimonials') }}" class="text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors">Results</a>
                     <a href="{{ route('contact') }}" class="text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors">Contact</a>
                 </div>
@@ -117,7 +116,6 @@
             <div x-show="open" x-transition class="md:hidden pb-4 space-y-1">
                 <a href="{{ route('home') }}" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md">Home</a>
                 <a href="{{ route('about') }}" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md">About</a>
-                <a href="{{ route('faculty') }}" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md">Faculty</a>
                 <a href="{{ route('testimonials') }}" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md">Results</a>
                 <a href="{{ route('contact') }}" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md">Contact</a>
                 <a href="{{ route('login') }}" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md">Login</a>
@@ -177,7 +175,6 @@
                     <ul class="space-y-2">
                         <li><a href="{{ route('home') }}" class="text-sm text-blue-200 hover:text-white transition-colors">Home</a></li>
                         <li><a href="{{ route('about') }}" class="text-sm text-blue-200 hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="{{ route('faculty') }}" class="text-sm text-blue-200 hover:text-white transition-colors">Our Faculty</a></li>
                         <li><a href="{{ route('testimonials') }}" class="text-sm text-blue-200 hover:text-white transition-colors">Success Stories</a></li>
                         <li><a href="{{ route('contact') }}" class="text-sm text-blue-200 hover:text-white transition-colors">Contact Us</a></li>
                         <li><a href="{{ route('admission.apply') }}" class="text-sm text-orange-400 hover:text-orange-300 font-medium transition-colors">Apply Now →</a></li>
