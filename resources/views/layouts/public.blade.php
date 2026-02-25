@@ -33,11 +33,11 @@
 
                 {{-- Desktop nav --}}
                 <div class="hidden md:flex items-center gap-6">
-                    <a href="/" class="text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors">Home</a>
-                    <a href="/#courses" class="text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors">Courses</a>
-                    <a href="/#faculty" class="text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors">Faculty</a>
-                    <a href="/#results" class="text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors">Results</a>
-                    <a href="/#contact" class="text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors">Contact</a>
+                    <a href="{{ route('home') }}" class="text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors">Home</a>
+                    <a href="{{ route('about') }}" class="text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors">About</a>
+                    <a href="{{ route('faculty') }}" class="text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors">Faculty</a>
+                    <a href="{{ route('testimonials') }}" class="text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors">Results</a>
+                    <a href="{{ route('contact') }}" class="text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors">Contact</a>
                 </div>
 
                 {{-- CTA buttons --}}
@@ -60,11 +60,11 @@
 
             {{-- Mobile menu --}}
             <div x-show="open" x-transition class="md:hidden pb-4 space-y-1">
-                <a href="/" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md">Home</a>
-                <a href="/#courses" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md">Courses</a>
-                <a href="/#faculty" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md">Faculty</a>
-                <a href="/#results" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md">Results</a>
-                <a href="/#contact" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md">Contact</a>
+                <a href="{{ route('home') }}" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md">Home</a>
+                <a href="{{ route('about') }}" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md">About</a>
+                <a href="{{ route('faculty') }}" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md">Faculty</a>
+                <a href="{{ route('testimonials') }}" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md">Results</a>
+                <a href="{{ route('contact') }}" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md">Contact</a>
                 <a href="{{ route('login') }}" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md">Login</a>
                 <a href="{{ route('admission.apply') }}" class="block mx-3 mt-2 py-2.5 text-sm font-semibold text-white text-center rounded-lg" style="background-color:#F97316;">Apply Now</a>
             </div>
@@ -120,11 +120,11 @@
                 <div>
                     <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="/" class="text-sm text-blue-200 hover:text-white transition-colors">Home</a></li>
-                        <li><a href="/#courses" class="text-sm text-blue-200 hover:text-white transition-colors">Courses</a></li>
-                        <li><a href="/#faculty" class="text-sm text-blue-200 hover:text-white transition-colors">Our Faculty</a></li>
-                        <li><a href="/#results" class="text-sm text-blue-200 hover:text-white transition-colors">Success Stories</a></li>
-                        <li><a href="/#contact" class="text-sm text-blue-200 hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="{{ route('home') }}" class="text-sm text-blue-200 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="{{ route('about') }}" class="text-sm text-blue-200 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="{{ route('faculty') }}" class="text-sm text-blue-200 hover:text-white transition-colors">Our Faculty</a></li>
+                        <li><a href="{{ route('testimonials') }}" class="text-sm text-blue-200 hover:text-white transition-colors">Success Stories</a></li>
+                        <li><a href="{{ route('contact') }}" class="text-sm text-blue-200 hover:text-white transition-colors">Contact Us</a></li>
                         <li><a href="{{ route('admission.apply') }}" class="text-sm text-orange-400 hover:text-orange-300 font-medium transition-colors">Apply Now →</a></li>
                     </ul>
                 </div>
@@ -159,6 +159,12 @@
             </div>
         </div>
     </footer>
+
+    {{-- ── CRO Components ───────────────────────────────────────────── --}}
+    <x-exit-intent-popup />
+    <x-entry-intent-popup />
+    <x-sticky-footer-cta />
+    <x-social-proof-notification />
 
     @livewireScripts
 </body>

@@ -10,6 +10,11 @@ Route::get('/', function () {
 Route::get('/admissions/apply', \App\Livewire\Public\Admission\AdmissionForm::class)->name('admission.apply');
 Route::get('/admissions/track', function () { return view('welcome'); })->name('admission.track');
 
+Route::view('/about', 'about')->name('about');
+Route::view('/faculty', 'faculty')->name('faculty');
+Route::view('/testimonials', 'testimonials')->name('testimonials');
+Route::view('/contact', 'contact')->name('contact');
+
 // ─── Auth Routes ──────────────────────────────────────────────────────────────
 require __DIR__.'/auth.php';
 
