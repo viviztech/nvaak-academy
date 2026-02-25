@@ -167,6 +167,31 @@
         </div>
     </section>
 
+    {{-- ── How It Works ──────────────────────────────────────────────────── --}}
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="text-sm font-semibold uppercase tracking-widest" style="color:#F97316;">Simple Process</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2" style="color:#1E3A5F;">Your Journey to Success in 4 Simple Steps</h2>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                @foreach([
+                    ['01', 'Book Free Demo',   'Experience our teaching style with zero commitment required.'],
+                    ['02', 'Choose Your Course','Select NEET or TNPSC coaching based on your career goal.'],
+                    ['03', 'Start Learning',    'Join live classes, access study materials, and take mock tests.'],
+                    ['04', 'Crack Your Exam',   'Clear your target exam with our expert guidance and support.'],
+                ] as [$step, $title, $desc])
+                <div class="text-center relative">
+                    <div class="h-16 w-16 rounded-full flex items-center justify-center text-2xl font-extrabold text-white mx-auto mb-5"
+                         style="background-color:#1E3A5F;">{{ $step }}</div>
+                    <h3 class="font-bold text-gray-900 mb-2">{{ $title }}</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">{{ $desc }}</p>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
     {{-- ── Why NVAAK Section ────────────────────────────────────────────── --}}
     <section class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -192,6 +217,195 @@
                     <p class="text-sm text-gray-500 leading-relaxed">{{ $desc }}</p>
                 </div>
                 @endforeach
+            </div>
+        </div>
+    </section>
+
+    {{-- ── Features Tabs ─────────────────────────────────────────────────── --}}
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-sm font-semibold uppercase tracking-widest" style="color:#F97316;">Platform Features</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2" style="color:#1E3A5F;">Everything You Need to Succeed</h2>
+            </div>
+            <div x-data="{ tab: 'live' }">
+                {{-- Tab Nav --}}
+                <div class="flex justify-center flex-wrap gap-3 mb-10">
+                    @foreach([
+                        ['live',      '📹', 'Live Classes'],
+                        ['tests',     '📝', 'Mock Tests'],
+                        ['materials', '📚', 'Study Materials'],
+                        ['doubts',    '💬', 'Doubt Clearing'],
+                    ] as [$key, $emoji, $label])
+                    <button @click="tab = '{{ $key }}'"
+                            :class="tab === '{{ $key }}' ? 'text-white' : 'bg-white text-gray-700 border border-gray-200'"
+                            :style="tab === '{{ $key }}' ? 'background-color:#1E3A5F;' : ''"
+                            class="px-5 py-2.5 rounded-xl text-sm font-semibold transition-all">
+                        {{ $emoji }} {{ $label }}
+                    </button>
+                    @endforeach
+                </div>
+
+                {{-- Live Classes --}}
+                <div x-show="tab === 'live'" x-transition class="grid md:grid-cols-2 gap-10 items-center bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-5" style="color:#1E3A5F;">Interactive Live Online Classes</h3>
+                        <ul class="space-y-3">
+                            @foreach(['Two-way audio/video interaction with faculty','Real-time doubt resolution during class','Screen sharing and digital whiteboard','Automatic attendance tracking','Class recordings available 24/7'] as $f)
+                            <li class="flex items-start gap-2 text-sm text-gray-700">
+                                <svg class="h-4 w-4 mt-0.5 shrink-0 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                {{ $f }}
+                            </li>
+                            @endforeach
+                        </ul>
+                        <a href="{{ route('admission.apply') }}" class="inline-flex items-center gap-2 mt-6 px-6 py-3 text-sm font-bold text-white rounded-xl transition-opacity hover:opacity-90" style="background-color:#F97316;">
+                            Try Free Demo Class →
+                        </a>
+                    </div>
+                    <div class="rounded-2xl flex items-center justify-center h-52 text-6xl" style="background:linear-gradient(135deg,#1E3A5F,#163050);">📹</div>
+                </div>
+
+                {{-- Mock Tests --}}
+                <div x-show="tab === 'tests'" x-transition class="grid md:grid-cols-2 gap-10 items-center bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-5" style="color:#1E3A5F;">Comprehensive Mock Tests</h3>
+                        <ul class="space-y-3">
+                            @foreach(['1000+ practice questions in question bank','Previous year NEET & TNPSC papers','Detailed subject-wise performance analysis','Time-bound exam simulation with NEET pattern','Instant results with answer explanations'] as $f)
+                            <li class="flex items-start gap-2 text-sm text-gray-700">
+                                <svg class="h-4 w-4 mt-0.5 shrink-0 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                {{ $f }}
+                            </li>
+                            @endforeach
+                        </ul>
+                        <a href="{{ route('admission.apply') }}" class="inline-flex items-center gap-2 mt-6 px-6 py-3 text-sm font-bold text-white rounded-xl transition-opacity hover:opacity-90" style="background-color:#F97316;">
+                            Start Practicing →
+                        </a>
+                    </div>
+                    <div class="rounded-2xl flex items-center justify-center h-52 text-6xl" style="background:linear-gradient(135deg,#F97316,#ea6c00);">📝</div>
+                </div>
+
+                {{-- Study Materials --}}
+                <div x-show="tab === 'materials'" x-transition class="grid md:grid-cols-2 gap-10 items-center bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-5" style="color:#1E3A5F;">Complete Study Materials</h3>
+                        <ul class="space-y-3">
+                            @foreach(['Digital PDFs and chapter-wise notes','Video lecture library accessible anytime','Printed materials available at centre','Updated annually with latest exam patterns','Mobile app access for offline study'] as $f)
+                            <li class="flex items-start gap-2 text-sm text-gray-700">
+                                <svg class="h-4 w-4 mt-0.5 shrink-0 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                {{ $f }}
+                            </li>
+                            @endforeach
+                        </ul>
+                        <a href="{{ route('admission.apply') }}" class="inline-flex items-center gap-2 mt-6 px-6 py-3 text-sm font-bold text-white rounded-xl transition-opacity hover:opacity-90" style="background-color:#F97316;">
+                            Access Materials →
+                        </a>
+                    </div>
+                    <div class="rounded-2xl flex items-center justify-center h-52 text-6xl" style="background:linear-gradient(135deg,#2d6a4f,#40916c);">📚</div>
+                </div>
+
+                {{-- Doubt Clearing --}}
+                <div x-show="tab === 'doubts'" x-transition class="grid md:grid-cols-2 gap-10 items-center bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-5" style="color:#1E3A5F;">24/7 Doubt Clearing</h3>
+                        <ul class="space-y-3">
+                            @foreach(['Dedicated daily doubt-clearing sessions','One-on-one support from subject experts','Quick response via WhatsApp & platform','Video explanations for complex topics','Subject-wise expert faculty assigned'] as $f)
+                            <li class="flex items-start gap-2 text-sm text-gray-700">
+                                <svg class="h-4 w-4 mt-0.5 shrink-0 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                                {{ $f }}
+                            </li>
+                            @endforeach
+                        </ul>
+                        <a href="https://wa.me/919940528779" target="_blank" class="inline-flex items-center gap-2 mt-6 px-6 py-3 text-sm font-bold text-white rounded-xl transition-opacity hover:opacity-90" style="background-color:#25D366;">
+                            Chat on WhatsApp →
+                        </a>
+                    </div>
+                    <div class="rounded-2xl flex items-center justify-center h-52 text-6xl" style="background:linear-gradient(135deg,#7c3aed,#6d28d9);">💬</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- ── Faculty Preview ───────────────────────────────────────────────── --}}
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="text-sm font-semibold uppercase tracking-widest" style="color:#F97316;">Our Team</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2" style="color:#1E3A5F;">Learn from the Best</h2>
+                <p class="text-gray-500 mt-3">Subject matter experts with years of teaching and examination experience.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                @foreach([
+                    ['👨‍🏫', 'Dr. Rajesh Kumar',  'Physics Expert',   'MBBS · 12+ yrs', '500+ NEET selections'],
+                    ['👩‍🏫', 'Dr. Priya Menon',   'Chemistry Expert', 'MD · 10+ yrs',    '400+ NEET selections'],
+                    ['👨‍🏫', 'Prof. Suresh Iyer',  'TNPSC Expert',     'IAS (Retd.) · 15+ yrs', '300+ TNPSC selections'],
+                    ['👩‍🏫', 'Dr. Anjali Reddy',  'Biology Expert',   'MBBS · 8+ yrs',   '350+ NEET selections'],
+                ] as [$emoji, $name, $role, $qual, $badge])
+                <div class="bg-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="h-20 w-20 rounded-full flex items-center justify-center text-4xl mx-auto mb-4"
+                         style="background:#EEF2FF;">{{ $emoji }}</div>
+                    <h3 class="font-bold text-gray-900 mb-1">{{ $name }}</h3>
+                    <p class="text-sm font-semibold mb-1" style="color:#F97316;">{{ $role }}</p>
+                    <p class="text-xs text-gray-400 mb-3">{{ $qual }}</p>
+                    <span class="inline-block text-xs font-semibold px-3 py-1 rounded-full" style="background:#FFF7ED; color:#C2410C;">🏆 {{ $badge }}</span>
+                </div>
+                @endforeach
+            </div>
+            <div class="text-center mt-10">
+                <a href="{{ route('faculty') }}" class="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold rounded-xl border-2 transition-colors hover:bg-white"
+                   style="border-color:#1E3A5F; color:#1E3A5F;">
+                    Meet All Faculty →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    {{-- ── Pricing Cards ─────────────────────────────────────────────────── --}}
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="text-sm font-semibold uppercase tracking-widest" style="color:#F97316;">Fee Structure</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2" style="color:#1E3A5F;">Flexible Plans for Every Student</h2>
+                <p class="text-gray-500 mt-3">Quality coaching at prices that won't burden your family. EMI available on all plans.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                @foreach([
+                    ['Most Popular', 'NEET 2027 (2-Year)', '₹45,000', '/2 years', '₹3,750/month',
+                     ['Complete 2-year syllabus coverage','1000+ mock tests included','Printed + digital study materials','Daily doubt-clearing sessions','AI-powered performance tracking']],
+                    [null, 'TNPSC Group 1', '₹35,000', '/year', 'EMI available',
+                     ['Complete TNPSC syllabus','Daily current affairs sessions','Interview preparation guidance','Previous year question papers','Mock interview sessions']],
+                    [null, 'NEET 2026 (1-Year)', '₹25,000', '/year', 'EMI available',
+                     ['Intensive 1-year preparation','500+ full-length mock tests','Study materials included','Doubt-clearing sessions','Performance analytics']],
+                ] as [$badge, $title, $price, $unit, $emi, $features])
+                <div class="rounded-2xl border-2 p-8 transition-all hover:shadow-lg {{ $badge ? 'border-orange-400 shadow-md relative' : 'border-gray-100' }}">
+                    @if($badge)
+                    <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 text-xs font-bold text-white rounded-full" style="background-color:#F97316;">{{ $badge }}</span>
+                    @endif
+                    <h3 class="text-xl font-bold mb-4" style="color:#1E3A5F;">{{ $title }}</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-extrabold" style="color:#1E3A5F;">{{ $price }}</span>
+                        <span class="text-base text-gray-500">{{ $unit }}</span>
+                    </div>
+                    <ul class="space-y-2.5 mb-8">
+                        @foreach($features as $f)
+                        <li class="flex items-start gap-2 text-sm text-gray-700">
+                            <svg class="h-4 w-4 mt-0.5 shrink-0 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                            {{ $f }}
+                        </li>
+                        @endforeach
+                    </ul>
+                    <a href="{{ route('admission.apply') }}"
+                       class="block w-full py-3 text-center text-sm font-bold text-white rounded-xl transition-opacity hover:opacity-90"
+                       style="background-color:{{ $badge ? '#F97316' : '#1E3A5F' }};">
+                        Enroll Now →
+                    </a>
+                    <p class="text-center text-xs text-gray-400 mt-3">💳 EMI from {{ $emi }}</p>
+                </div>
+                @endforeach
+            </div>
+            <div class="flex justify-center gap-8 mt-10 flex-wrap text-sm text-gray-500">
+                <span>🔒 100% Secure Payment</span>
+                <span>💯 Money-back Guarantee</span>
+                <span>📞 24/7 Support</span>
             </div>
         </div>
     </section>
