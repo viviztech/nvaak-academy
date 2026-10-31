@@ -1,4 +1,4 @@
-@extends('layouts.public', ['title' => 'NVAAK IAS & NEET Academy – NEET & TNPSC Coaching in Avadi, Chennai'])
+@extends('layouts.public', ['title' => 'NEET Coaching in Avadi, Chennai | NVAAK IAS & NEET Academy – UPSC, TNPSC, NEET, JEE'])
 @section('content')
 
     {{-- ── Hero Section ────────────────────────────────────────────────── --}}
@@ -9,7 +9,7 @@
                 {{-- Left: copy --}}
                 <div>
                     <span class="inline-block bg-yellow-400 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                        🏆 85% Success Rate in NEET 2025
+                        Now Open — Admissions for 2026–27 Batch
                     </span>
                     <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
                         Your Dream Medical &
@@ -17,13 +17,13 @@
                     </h1>
                     <p class="text-xl mb-8 text-gray-700">
                         Expert NEET & TNPSC coaching in Avadi, Chennai.
-                        Live classes, expert faculty, proven results.
+                        Small batches, dedicated faculty, personalised attention from day one.
                     </p>
 
                     <div class="flex flex-col sm:flex-row gap-4 mb-8">
                         <a href="{{ route('admission.apply') }}"
                            class="bg-nvaak-teal text-white px-8 py-3 rounded-lg hover:bg-nvaak-teal-600 transition font-semibold text-center">
-                            Book Free Demo Class 🎯
+                            Book Free Demo Class
                         </a>
                         <a href="#courses"
                            class="bg-white text-nvaak-teal border-2 border-nvaak-teal px-8 py-3 rounded-lg hover:bg-nvaak-teal-50 transition font-semibold text-center">
@@ -33,16 +33,16 @@
 
                     <div class="flex flex-wrap gap-8">
                         <div>
-                            <strong class="text-2xl text-nvaak-teal block">500+</strong>
-                            <span class="text-gray-600">Students Trained</span>
+                            <strong class="text-2xl text-nvaak-teal block">Small</strong>
+                            <span class="text-gray-600">Batch Sizes</span>
                         </div>
                         <div>
-                            <strong class="text-2xl text-nvaak-teal block">85%</strong>
-                            <span class="text-gray-600">Success Rate</span>
+                            <strong class="text-2xl text-nvaak-teal block">Expert</strong>
+                            <span class="text-gray-600">Faculty</span>
                         </div>
                         <div>
-                            <strong class="text-2xl text-nvaak-teal block">15+</strong>
-                            <span class="text-gray-600">Expert Faculty</span>
+                            <strong class="text-2xl text-nvaak-teal block">Avadi</strong>
+                            <span class="text-gray-600">Chennai</span>
                         </div>
                     </div>
                 </div>
@@ -52,8 +52,8 @@
                     <div class="bg-gradient-to-br from-nvaak-teal to-nvaak-teal-600 rounded-2xl p-8 text-white text-center h-96 flex items-center justify-center">
                         <div>
                             <div class="text-6xl mb-4">🎓</div>
-                            <p class="text-xl font-semibold">Success Stories</p>
-                            <p class="text-white/80 mt-2">500+ students cleared NEET & TNPSC</p>
+                            <p class="text-xl font-semibold">Begin Your Journey</p>
+                            <p class="text-white/80 mt-2">Enrol now and be part of our 2026–27 batch</p>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
     {{-- ── Courses Section ──────────────────────────────────────────────── --}}
     <section id="courses" class="bg-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-center text-3xl font-bold mb-12 text-gray-900">Choose Your Path to Success</h2>
+            <h2 class="text-center text-3xl font-bold mb-12 text-gray-900">Choose Your Path</h2>
 
             <div class="grid md:grid-cols-2 gap-8">
                 {{-- NEET Card --}}
@@ -114,12 +114,12 @@
 
             <div class="grid md:grid-cols-3 gap-8">
                 @foreach([
-                    ['🎓', 'Expert Faculty from Top Colleges',       'Learn from doctors and government officers who\'ve cracked these exams'],
+                    ['🎓', 'Experienced Faculty',                     'Faculty with deep subject expertise in NEET, IAS, and TNPSC syllabi'],
                     ['📱', 'Hybrid Learning Model',                   'Attend live online classes or visit our Avadi centre — your choice!'],
-                    ['📊', 'Personalised Performance Tracking',       'AI-powered analytics to identify weak areas and improve scores'],
+                    ['📊', 'Personalised Performance Tracking',       'Regular assessments to identify weak areas and guide focused improvement'],
                     ['💰', 'Affordable Fee Structure',                'Quality education at prices that won\'t burden your family'],
                     ['📚', 'Complete Study Materials',                'Digital + printed materials covering the entire syllabus'],
-                    ['🏆', 'Proven Track Record',                     '85% of our students clear their target exams'],
+                    ['👥', 'Small Batch Sizes',                       'Limited seats per batch so every student gets the attention they deserve'],
                 ] as [$emoji, $title, $desc])
                 <div class="text-center bg-white p-6 rounded-lg shadow-sm">
                     <div class="text-5xl mb-4">{{ $emoji }}</div>
@@ -131,52 +131,30 @@
         </div>
     </section>
 
-    {{-- ── Success Stories ──────────────────────────────────────────────── --}}
+    {{-- ── About the Academy ────────────────────────────────────────────── --}}
     <section class="bg-gradient-to-r from-nvaak-teal-500 to-nvaak-teal-700 text-white py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-center text-3xl font-bold mb-4">Our Students' Success Stories</h2>
-            <p class="text-center text-white/80 mb-12">Real students, Real results</p>
+            <h2 class="text-center text-3xl font-bold mb-4">Why We Started NVAAK Academy</h2>
+            <p class="text-center text-white/80 mb-12 max-w-2xl mx-auto">
+                We believe every student in Avadi deserves quality NEET and government exam coaching — without having to travel to the city.
+            </p>
 
-            <div x-data="{ slide: 0, slides: 2 }" class="relative max-w-3xl mx-auto">
-                <div class="overflow-hidden">
-                    <div class="flex transition-transform duration-500" :style="`transform: translateX(-${slide * 100}%)`">
-
-                        <div class="min-w-full px-4">
-                            <div class="bg-white text-gray-900 rounded-2xl p-8 flex flex-col md:flex-row gap-8 items-center">
-                                <div class="w-24 h-24 bg-nvaak-teal rounded-full flex items-center justify-center text-4xl shrink-0">👤</div>
-                                <div>
-                                    <h3 class="text-xl font-bold mb-1">Priya Sharma</h3>
-                                    <p class="text-nvaak-teal font-semibold mb-3">NEET 2025 – AIR 245 · Madras Medical College</p>
-                                    <p class="text-gray-600">"NVAAK Academy's structured approach and constant doubt-clearing sessions helped me secure admission in Madras Medical College."</p>
-                                    <div class="text-yellow-400 mt-3">⭐⭐⭐⭐⭐</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="min-w-full px-4">
-                            <div class="bg-white text-gray-900 rounded-2xl p-8 flex flex-col md:flex-row gap-8 items-center">
-                                <div class="w-24 h-24 bg-nvaak-teal rounded-full flex items-center justify-center text-4xl shrink-0">👤</div>
-                                <div>
-                                    <h3 class="text-xl font-bold mb-1">Rajesh Kumar</h3>
-                                    <p class="text-nvaak-teal font-semibold mb-3">TNPSC Group 1 – Selected</p>
-                                    <p class="text-gray-600">"The daily current affairs updates and comprehensive study materials made all the difference. Thank you NVAAK Academy!"</p>
-                                    <div class="text-yellow-400 mt-3">⭐⭐⭐⭐⭐</div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white/10 rounded-2xl p-6 text-center">
+                    <div class="text-4xl mb-3">🏠</div>
+                    <h3 class="text-lg font-bold mb-2">Local & Accessible</h3>
+                    <p class="text-white/80 text-sm">Right here in Avadi — no long commutes, no big-city fees. Quality coaching in your own neighbourhood.</p>
                 </div>
-                <button @click="slide = (slide - 1 + slides) % slides"
-                        class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white text-nvaak-teal p-3 rounded-full hover:bg-gray-100 shadow-md">←</button>
-                <button @click="slide = (slide + 1) % slides"
-                        class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white text-nvaak-teal p-3 rounded-full hover:bg-gray-100 shadow-md">→</button>
-            </div>
-
-            <div class="text-center mt-12">
-                <a href="{{ route('testimonials') }}" class="bg-white text-nvaak-teal px-8 py-3 rounded-lg hover:bg-gray-100 transition font-semibold">
-                    View All Success Stories →
-                </a>
+                <div class="bg-white/10 rounded-2xl p-6 text-center">
+                    <div class="text-4xl mb-3">🎯</div>
+                    <h3 class="text-lg font-bold mb-2">Goal-Focused Teaching</h3>
+                    <p class="text-white/80 text-sm">Our curriculum is built around the actual exam pattern — every class, test, and session has a clear purpose.</p>
+                </div>
+                <div class="bg-white/10 rounded-2xl p-6 text-center">
+                    <div class="text-4xl mb-3">🤝</div>
+                    <h3 class="text-lg font-bold mb-2">Student-First Approach</h3>
+                    <p class="text-white/80 text-sm">Small batches mean we know each student by name — your progress matters to us personally.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -184,14 +162,14 @@
     {{-- ── How It Works ──────────────────────────────────────────────────── --}}
     <section class="bg-white py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-center text-3xl font-bold mb-12 text-gray-900">Your Journey to Success in 4 Simple Steps</h2>
+            <h2 class="text-center text-3xl font-bold mb-12 text-gray-900">How It Works — 4 Simple Steps</h2>
 
             <div class="grid md:grid-cols-4 gap-8">
                 @foreach([
                     ['01', 'Book Free Demo',    'Experience our teaching style with zero commitment'],
                     ['02', 'Choose Your Course','Select NEET or TNPSC based on your goals'],
                     ['03', 'Start Learning',    'Join live classes, access materials, take tests'],
-                    ['04', 'Crack Your Exam',   'Clear your target with our expert guidance'],
+                    ['04', 'Achieve Your Goal',  'Write your exam with confidence after thorough preparation'],
                 ] as [$step, $title, $desc])
                 <div class="text-center">
                     <div class="bg-nvaak-teal text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">{{ $step }}</div>
@@ -281,8 +259,8 @@
     {{-- ── Final CTA ─────────────────────────────────────────────────────── --}}
     <section class="bg-gradient-to-r from-nvaak-teal-600 to-blue-600 text-white py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl font-bold mb-6">Ready to Start Your Success Journey?</h2>
-            <p class="text-xl mb-8 text-white/80">Join 500+ students who are already preparing with NVAAK Academy</p>
+            <h2 class="text-4xl font-bold mb-6">Ready to Begin Your Preparation?</h2>
+            <p class="text-xl mb-8 text-white/80">Admissions open for our 2026–27 batch — seats are limited</p>
 
             <div class="flex justify-center gap-4 flex-wrap">
                 <a href="{{ route('admission.apply') }}"
@@ -295,7 +273,7 @@
                 </a>
             </div>
 
-            <p class="mt-8 text-sm text-white/70">⏰ Limited seats available for 2026 batch — Enroll before December 31!</p>
+            <p class="mt-8 text-sm text-white/70">Limited seats per batch — apply early to secure your spot</p>
         </div>
     </section>
 
@@ -309,8 +287,8 @@
                     <h2 class="text-3xl font-bold mb-6 text-gray-900">Visit Our Avadi Centre</h2>
                     <div class="space-y-4">
                         @foreach([
-                            ['📍', 'Address',      'No. 3517 A, TNHB, Avadi, Chennai – 600054', null],
-                            ['📞', 'Phone',        '+91 99405 28779', 'tel:+919940528779'],
+                            ['📍', 'Address',      'Plot No: 3517/A, TNHB, Near Ponnu Super Bazaar, Avadi – 600054', null],
+                            ['📞', 'Phone',        '99405 28779 | 044 2621 2875', 'tel:+919940528779'],
                             ['💬', 'WhatsApp',     '+91 99405 28779', 'https://wa.me/919940528779'],
                             ['✉️', 'Email',        'info@nvaakacademy.com', 'mailto:info@nvaakacademy.com'],
                             ['🕐', 'Office Hours', 'Mon – Sat: 9:00 AM – 6:00 PM | Sunday: Closed', null],
@@ -338,7 +316,7 @@
                 {{-- Map --}}
                 <div class="rounded-2xl overflow-hidden shadow-md border border-gray-100 h-80 lg:h-[420px]">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3884.2!2d80.0984!3d13.1165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDA2JzU5LjQiTiA4MMKwMDUnNTQuMiJF!5e0!3m2!1sen!2sin!4v1"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3884.2!2d80.0984!3d13.1165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265879b1b1b1b%3A0x2e1abb622de22d06!2sNVAAK%20IAS%20%26%20NEET%20ACADEMY!5e0!3m2!1sen!2sin!4v1"
                         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>

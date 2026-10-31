@@ -6,22 +6,22 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Primary Meta Tags -->
-    <title>{{ $title ?? 'NVAAK IAS & NEET Academy – NEET & TNPSC Coaching in Avadi, Chennai' }}</title>
-    <meta name="title" content="{{ $title ?? 'Best NEET & TNPSC Coaching Center in Avadi, Chennai' }}">
-    <meta name="description" content="{{ $description ?? 'NVAAK Academy offers expert NEET and TNPSC coaching in Avadi, Chennai. Live online classes, 15+ experienced faculty, 85% success rate. Enroll now!' }}">
-    <meta name="keywords" content="NEET coaching Avadi, TNPSC coaching Chennai, medical entrance coaching, government exam coaching, online classes">
+    <title>{{ $title ?? 'NVAAK IAS & NEET Academy – NEET, IAS & TNPSC Coaching in Avadi, Chennai' }}</title>
+    <meta name="title" content="{{ $title ?? 'NEET Coaching in Avadi, Chennai | NVAAK IAS & NEET Academy' }}">
+    <meta name="description" content="{{ $description ?? 'NVAAK IAS & NEET Academy offers expert UPSC, TNPSC, NEET & JEE coaching in Avadi, Chennai. Small batches, experienced faculty, personalised mentoring. Located near Ponnu Super Bazaar, Avadi. Call 99405 28779.' }}">
+    <meta name="keywords" content="NEET coaching Avadi, IAS coaching Avadi, UPSC coaching Avadi Chennai, TNPSC coaching Avadi, JEE coaching Avadi, best coaching centre Avadi, NEET coaching near me, competitive exam coaching Ambattur Poonamallee Tiruvallur">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:title" content="{{ $title ?? 'NVAAK Academy – Best NEET & TNPSC Coaching in Avadi' }}">
-    <meta property="og:description" content="{{ $description ?? 'Expert coaching for NEET and TNPSC exams in Avadi, Chennai.' }}">
+    <meta property="og:title" content="{{ $title ?? 'NVAAK IAS & NEET Academy – NEET & IAS Coaching in Avadi, Chennai' }}">
+    <meta property="og:description" content="{{ $description ?? 'Expert UPSC, TNPSC, NEET & JEE coaching in Avadi, Chennai. Small batches, personalised mentoring. Near Ponnu Super Bazaar, Avadi.' }}">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="{{ url()->current() }}">
-    <meta property="twitter:title" content="{{ $title ?? 'NVAAK Academy' }}">
-    <meta property="twitter:description" content="{{ $description ?? 'Expert NEET & TNPSC Coaching in Avadi, Chennai' }}">
+    <meta property="twitter:title" content="{{ $title ?? 'NVAAK IAS & NEET Academy – Avadi, Chennai' }}">
+    <meta property="twitter:description" content="{{ $description ?? 'UPSC, TNPSC, NEET & JEE Coaching in Avadi, Chennai | Near Ponnu Super Bazaar' }}">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ url()->current() }}">
@@ -40,13 +40,13 @@
             "@context" => "https://schema.org",
             "@type" => "EducationalOrganization",
             "name" => "NVAAK IAS & NEET Academy",
-            "description" => "NEET and TNPSC Coaching Center in Avadi, Chennai",
+            "description" => "NVAAK IAS & NEET Academy is Avadi's coaching institute for UPSC, TNPSC, NEET, and JEE preparation. Located near Ponnu Super Bazaar, TNHB, Avadi, Chennai.",
             "url" => config('app.url'),
-            "telephone" => "+91-99405-28779",
+            "telephone" => ["+91-99405-28779", "+91-44-26212875"],
             "email" => "info@nvaakacademy.com",
             "address" => [
                 "@type" => "PostalAddress",
-                "streetAddress" => "No. 3517 A, TNHB",
+                "streetAddress" => "Plot No: 3517/A, TNHB, Near Ponnu Super Bazaar",
                 "addressLocality" => "Avadi",
                 "addressRegion" => "Tamil Nadu",
                 "postalCode" => "600054",
@@ -58,11 +58,19 @@
                 "longitude" => "80.0984"
             ],
             "priceRange" => "₹₹",
-            "areaServed" => ["Chennai", "Avadi", "Tamil Nadu"],
-            "aggregateRating" => [
-                "@type" => "AggregateRating",
-                "ratingValue" => "4.8",
-                "reviewCount" => "250"
+            "areaServed" => ["Avadi", "Ambattur", "Poonamallee", "Tiruvallur", "Anna Nagar", "Chennai", "Tamil Nadu"],
+            "hasOfferCatalog" => [
+                "@type" => "OfferCatalog",
+                "name" => "Coaching Programmes",
+                "itemListElement" => [
+                    ["@type" => "Offer", "itemOffered" => ["@type" => "Course", "name" => "NEET Coaching", "description" => "Foundation, Regular & Repeater batches for NEET medical entrance"]],
+                    ["@type" => "Offer", "itemOffered" => ["@type" => "Course", "name" => "UPSC IAS Coaching", "description" => "Prelims, Mains & Interview preparation for Civil Services"]],
+                    ["@type" => "Offer", "itemOffered" => ["@type" => "Course", "name" => "TNPSC Coaching", "description" => "Group 1, 2, 2A & 4 exam preparation"]],
+                    ["@type" => "Offer", "itemOffered" => ["@type" => "Course", "name" => "JEE Coaching", "description" => "JEE Mains & Advanced preparation"]],
+                    ["@type" => "Offer", "itemOffered" => ["@type" => "Course", "name" => "DEO/BEO Coaching", "description" => "Departmental exam preparation"]],
+                    ["@type" => "Offer", "itemOffered" => ["@type" => "Course", "name" => "PG-TRB / TET Coaching", "description" => "Teacher eligibility exam preparation"]],
+                    ["@type" => "Offer", "itemOffered" => ["@type" => "Course", "name" => "SI/Police Exam Coaching", "description" => "TNUSRB exam preparation"]],
+                ]
             ]
         ];
     @endphp
@@ -90,7 +98,7 @@
                 <div class="hidden md:flex items-center gap-6">
                     <a href="{{ route('home') }}" class="text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors">Home</a>
                     <a href="{{ route('about') }}" class="text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors">About</a>
-                    <a href="{{ route('testimonials') }}" class="text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors">Results</a>
+                    <a href="{{ route('courses') }}" class="text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors">Courses</a>
                     <a href="{{ route('contact') }}" class="text-sm font-medium text-gray-700 hover:text-orange-500 transition-colors">Contact</a>
                 </div>
 
@@ -116,7 +124,7 @@
             <div x-show="open" x-transition class="md:hidden pb-4 space-y-1">
                 <a href="{{ route('home') }}" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md">Home</a>
                 <a href="{{ route('about') }}" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md">About</a>
-                <a href="{{ route('testimonials') }}" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md">Results</a>
+                <a href="{{ route('courses') }}" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md">Courses</a>
                 <a href="{{ route('contact') }}" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md">Contact</a>
                 <a href="{{ route('login') }}" class="block px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-md">Login</a>
                 <a href="{{ route('admission.apply') }}" class="block mx-3 mt-2 py-2.5 text-sm font-semibold text-white text-center rounded-lg" style="background-color:#F97316;">Apply Now</a>
@@ -158,7 +166,7 @@
                         <span class="text-xl font-extrabold text-white">NVAAK IAS & NEET Academy</span>
                     </div>
                     <p class="text-sm text-blue-200 leading-relaxed mb-4">
-                        Expert NEET & TNPSC coaching in Avadi, Chennai. Empowering students to achieve their medical and government career dreams since 2015.
+                        UPSC, TNPSC, NEET & JEE coaching in Avadi, Chennai. Located near Ponnu Super Bazaar, TNHB, Avadi — quality coaching in your own neighbourhood.
                     </p>
                     <div class="flex items-center gap-3">
                         <a href="https://wa.me/919940528779" target="_blank"
@@ -175,8 +183,9 @@
                     <ul class="space-y-2">
                         <li><a href="{{ route('home') }}" class="text-sm text-blue-200 hover:text-white transition-colors">Home</a></li>
                         <li><a href="{{ route('about') }}" class="text-sm text-blue-200 hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="{{ route('testimonials') }}" class="text-sm text-blue-200 hover:text-white transition-colors">Success Stories</a></li>
+                        <li><a href="{{ route('courses') }}" class="text-sm text-blue-200 hover:text-white transition-colors">Courses</a></li>
                         <li><a href="{{ route('contact') }}" class="text-sm text-blue-200 hover:text-white transition-colors">Contact Us</a></li>
+                        {{-- Results link hidden until student results are available --}}
                         <li><a href="{{ route('admission.apply') }}" class="text-sm text-orange-400 hover:text-orange-300 font-medium transition-colors">Apply Now →</a></li>
                     </ul>
                 </div>
@@ -187,11 +196,14 @@
                     <ul class="space-y-3">
                         <li class="flex items-start gap-2">
                             <svg class="h-4 w-4 text-orange-400 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                            <span class="text-sm text-blue-200">No. 3517 A, TNHB, Avadi,<br>Chennai – 600054</span>
+                            <span class="text-sm text-blue-200">Plot No: 3517/A, TNHB,<br>Near Ponnu Super Bazaar, Avadi – 600054</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <svg class="h-4 w-4 text-orange-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                            <a href="tel:+919940528779" class="text-sm text-blue-200 hover:text-white transition-colors">+91 99405 28779</a>
+                            <div class="flex flex-col">
+                                <a href="tel:+919940528779" class="text-sm text-blue-200 hover:text-white transition-colors">+91 99405 28779</a>
+                                <a href="tel:+914426212875" class="text-sm text-blue-200 hover:text-white transition-colors">044 2621 2875</a>
+                            </div>
                         </li>
                         <li class="flex items-center gap-2">
                             <svg class="h-4 w-4 text-orange-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
@@ -207,7 +219,7 @@
 
             <div class="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-2">
                 <p class="text-sm text-blue-300">&copy; {{ date('Y') }} NVAAK IAS & NEET Academy. All rights reserved.</p>
-                <p class="text-xs text-blue-400">NEET & TNPSC Coaching Institute, Avadi, Chennai</p>
+                <p class="text-xs text-blue-400">UPSC · TNPSC · NEET · JEE Coaching | Avadi, Chennai – 600054</p>
             </div>
         </div>
     </footer>

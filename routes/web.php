@@ -11,6 +11,7 @@ Route::get('/admissions/apply', \App\Livewire\Public\Admission\AdmissionForm::cl
 Route::get('/admissions/track', function () { return view('welcome'); })->name('admission.track');
 
 Route::view('/about', 'about')->name('about');
+Route::view('/courses', 'courses')->name('courses');
 Route::view('/faculty', 'faculty')->name('faculty');
 Route::view('/testimonials', 'testimonials')->name('testimonials');
 Route::view('/contact', 'contact')->name('contact');
