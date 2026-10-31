@@ -30,6 +30,34 @@ the installed extensions with `composer check-platform-reqs --no-dev`. Configure
 the production `.env`, database, and background queue worker before launch.
 Preserve the existing `APP_KEY` when updating an existing installation.
 
+CloudPanel's static-file rules can intercept Livewire's JavaScript route and
+return a 404, which prevents browser login and other interactive forms. In the
+HTTPS proxy server block, route `/livewire/` to the PHP backend before the
+static-file rules:
+
+```nginx
+location ^~ /livewire/ {
+    proxy_pass http://127.0.0.1:8080;
+    proxy_set_header Host $host;
+    proxy_set_header X-Forwarded-Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+}
+```
+
+In the backend server block listening on port 8080, also route Livewire requests
+through Laravel while preserving their original request URI:
+
+```nginx
+location ^~ /livewire/ {
+    rewrite ^ /index.php last;
+}
+```
+
+Validate with `nginx -t` before reloading Nginx. Check the Livewire script URL
+rendered by `/login` and complete a browser login after deployment; a successful
+direct POST to Livewire alone does not verify browser asset delivery.
+
 The framework upgrade follows the [Laravel 13 upgrade guide](https://laravel.com/docs/13.x/upgrade).
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>

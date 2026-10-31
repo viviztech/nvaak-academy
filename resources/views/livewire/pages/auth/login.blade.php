@@ -35,7 +35,8 @@ new #[Layout('layouts.guest')] class extends Component
         </div>
     @endif
 
-    <form wire:submit="login" class="space-y-5">
+    <form method="POST" action="{{ route('login') }}" wire:submit="login" class="space-y-5">
+        @csrf
 
         {{-- Email --}}
         <div>
