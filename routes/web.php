@@ -33,6 +33,7 @@ Route::middleware(['auth', 'role:super-admin|admin|counsellor'])->prefix('admin'
     Route::middleware('role:super-admin|admin')->group(function () {
         Route::get('/admissions', \App\Livewire\Admin\Admissions\Index::class)->name('admissions.index');
         Route::get('/admissions/{id}', \App\Livewire\Admin\Admissions\Detail::class)->name('admissions.detail');
+        Route::get('/admissions/{admission}/documents/{type}', \App\Http\Controllers\AdmissionDocumentController::class)->name('admissions.documents.download');
 
         // Batches
         Route::get('/batches', \App\Livewire\Admin\Batches\Index::class)->name('batches.index');

@@ -164,7 +164,7 @@ class AdmissionForm extends Component
         if ($this->photo) {
             $path = $this->photo->store(
                 'admissions/' . $applicationNumber . '/photo',
-                'public'
+                'private'
             );
             $documentPaths['photo'] = $path;
         }
@@ -172,7 +172,7 @@ class AdmissionForm extends Component
         if ($this->aadhaar_document) {
             $path = $this->aadhaar_document->store(
                 'admissions/' . $applicationNumber . '/aadhaar',
-                'public'
+                'private'
             );
             $documentPaths['aadhaar'] = $path;
         }
@@ -180,7 +180,7 @@ class AdmissionForm extends Component
         if ($this->marksheet) {
             $path = $this->marksheet->store(
                 'admissions/' . $applicationNumber . '/marksheet',
-                'public'
+                'private'
             );
             $documentPaths['marksheet'] = $path;
         }

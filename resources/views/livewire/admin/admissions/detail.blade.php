@@ -231,7 +231,7 @@
                 <div class="p-5">
                     <div class="grid sm:grid-cols-3 gap-4">
                         @foreach($admission->documents as $type => $path)
-                        <a href="{{ Storage::url($path) }}" target="_blank"
+                        <a href="{{ route('admin.admissions.documents.download', ['admission' => $admission, 'type' => $type]) }}" target="_blank"
                            class="flex items-center gap-3 p-4 rounded-xl border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group">
                             <div class="h-10 w-10 rounded-lg flex items-center justify-center shrink-0 bg-gray-100 group-hover:bg-blue-100">
                                 @if(str_ends_with(strtolower($path), '.pdf'))
