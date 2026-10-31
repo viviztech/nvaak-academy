@@ -1,4 +1,4 @@
-@extends('layouts.public', ['title' => 'About Us – NVAAK IAS & NEET Academy, Avadi Chennai'])
+@extends('layouts.public', ['title' => 'About Us – NVAAK IAS & NEET Academy | NEET & IAS Coaching in Avadi, Chennai'])
 @section('content')
 
     {{-- ── Page Hero ──────────────────────────────────────────────────────── --}}
@@ -6,11 +6,11 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4"
                   style="background:rgba(249,115,22,0.15); color:#F97316; border:1px solid rgba(249,115,22,0.3);">
-                Established 2015 · Avadi, Chennai
+                Inaugurated April 2026 · Avadi, Chennai
             </span>
             <h1 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">About NVAAK IAS & NEET Academy</h1>
             <p class="text-lg text-white/80 max-w-2xl mx-auto">
-                A premier coaching institute dedicated to helping students achieve their dreams of cracking NEET and TNPSC examinations.
+                A dedicated coaching institute in Avadi, Chennai for UPSC, TNPSC, NEET, JEE and other competitive examinations.
             </p>
         </div>
     </section>
@@ -21,29 +21,29 @@
             <div class="grid lg:grid-cols-2 gap-14 items-center">
                 <div>
                     <span class="text-sm font-semibold uppercase tracking-widest" style="color:#F97316;">Who We Are</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold mt-2 mb-6" style="color:#218091;">More Than a Coaching Centre</h2>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold mt-2 mb-6" style="color:#218091;">Coaching That Puts You First</h2>
                     <p class="text-gray-600 leading-relaxed mb-4">
-                        NVAAK IAS & NEET Academy is a premier coaching institute located in Avadi, Chennai, dedicated to helping students achieve their dreams of cracking NEET and TNPSC examinations.
+                        NVAAK IAS & NEET Academy is a newly inaugurated coaching institute located in Avadi, Chennai — built with one purpose: to give students in this neighbourhood the same quality of competitive exam preparation available in the city, without the commute or the cost.
                     </p>
                     <p class="text-gray-600 leading-relaxed mb-4">
-                        With over <strong class="text-gray-800">500 successful students</strong> and an <strong class="text-gray-800">85% success rate</strong>, we have established ourselves as a trusted name in competitive exam coaching in the Avadi region. Our expert faculty, comprehensive study materials, and personalised approach ensure that every student receives the guidance they need to succeed.
+                        We offer coaching for UPSC (IAS/IPS/IFS), TNPSC (Group 1, 2, 2A, 4), NEET, JEE, DEO/BEO, PG-TRB/TET, and SI/Police exams. Our faculty brings deep subject expertise and a genuine commitment to each student's progress.
                     </p>
                     <p class="text-gray-600 leading-relaxed">
-                        We believe that quality education should be accessible to every aspiring student, regardless of their background. That's why we offer flexible learning options — both at our Avadi centre and online — along with affordable fee structures and EMI facilities.
+                        We keep our batch sizes small deliberately — so every student gets individual attention, personalised feedback, and the focused guidance needed to succeed in highly competitive exams.
                     </p>
                 </div>
 
-                {{-- Stats grid --}}
+                {{-- Highlights grid --}}
                 <div class="grid grid-cols-2 gap-5">
                     @foreach([
-                        ['500+', 'Students Trained', '🎓'],
-                        ['85%',  'NEET Success Rate', '🏆'],
-                        ['15+',  'Expert Faculty',    '👨‍🏫'],
-                        ['10+',  'Years of Excellence','📅'],
+                        ['UPSC · TNPSC · NEET · JEE', 'Courses Offered',        '📚'],
+                        ['Small',                      'Batch Sizes',            '👥'],
+                        ['Bilingual',                  'Tamil & English Medium', '🗣️'],
+                        ['Avadi',                      'Near Ponnu Super Bazaar','📍'],
                     ] as [$n, $l, $e])
                     <div class="rounded-2xl p-6 text-center border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                         <div class="text-3xl mb-2">{{ $e }}</div>
-                        <p class="text-3xl font-extrabold mb-1" style="color:#218091;">{{ $n }}</p>
+                        <p class="text-lg font-extrabold mb-1 leading-tight" style="color:#218091;">{{ $n }}</p>
                         <p class="text-sm text-gray-500">{{ $l }}</p>
                     </div>
                     @endforeach
@@ -83,12 +83,12 @@
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 @foreach([
-                    ['🎓', 'Expert Faculty from Top Colleges',      'Learn from doctors and retired government officers who have cracked these exams themselves.'],
+                    ['🎓', 'Experienced Faculty',                    'Faculty with strong subject expertise dedicated to UPSC, TNPSC, NEET and JEE preparation.'],
                     ['📱', 'Hybrid Learning Model',                  'Attend live online classes or visit our Avadi centre — your choice, your convenience.'],
-                    ['📊', 'Personalised Performance Tracking',      'AI-powered analytics identify your weak areas so you can focus effort where it matters most.'],
+                    ['📊', 'Personalised Performance Tracking',      'Regular assessments and one-on-one feedback to keep your preparation on track.'],
                     ['💰', 'Affordable Fee Structure',               'Quality education at prices that won\'t burden your family, with EMI options available.'],
-                    ['📚', 'Complete Study Materials',               'Digital + printed materials covering the entire NEET and TNPSC syllabus, updated every year.'],
-                    ['🏆', 'Proven Track Record',                    '85% of our students clear their target exams — a result we\'re proud of and committed to maintaining.'],
+                    ['📚', 'Complete Study Materials',               'Digital + printed materials covering the full syllabus for every course we offer.'],
+                    ['👥', 'Small Batch Sizes',                      'Limited seats per batch so every student gets individual attention and focused guidance.'],
                 ] as [$emoji, $title, $desc])
                 <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:shadow-md transition-shadow">
                     <div class="h-12 w-12 rounded-xl flex items-center justify-center text-2xl mb-4" style="background:#FFF7ED;">{{ $emoji }}</div>

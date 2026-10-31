@@ -25,8 +25,8 @@
                     <h2 class="text-2xl font-extrabold mb-8" style="color:#218091;">Get in Touch</h2>
                     <div class="space-y-4">
                         @foreach([
-                            ['📍', 'Our Address',    'No. 3517 A, TNHB, Avadi, Chennai – 600054', null],
-                            ['📞', 'Phone',          '+91 99405 28779', 'tel:+919940528779'],
+                            ['📍', 'Our Address',    'Plot No: 3517/A, TNHB, Near Ponnu Super Bazaar, Avadi – 600054', null],
+                            ['📞', 'Phone',          '99405 28779 | 044 2621 2875', 'tel:+919940528779'],
                             ['💬', 'WhatsApp',       '+91 99405 28779', 'https://wa.me/919940528779'],
                             ['✉️', 'Email',          'info@nvaakacademy.com', 'mailto:info@nvaakacademy.com'],
                             ['🕐', 'Office Hours',   'Mon – Sat: 9:00 AM – 6:00 PM | Sunday: Closed', null],
@@ -49,7 +49,7 @@
                     {{-- Map --}}
                     <div class="mt-8 rounded-2xl overflow-hidden shadow-md border border-gray-100 h-64">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3884.2!2d80.0984!3d13.1165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDA2JzU5LjQiTiA4MMKwMDUnNTQuMiJF!5e0!3m2!1sen!2sin!4v1"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3884.2!2d80.0984!3d13.1165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265879b1b1b1b%3A0x2e1abb622de22d06!2sNVAAK%20IAS%20%26%20NEET%20ACADEMY!5e0!3m2!1sen!2sin!4v1"
                             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
