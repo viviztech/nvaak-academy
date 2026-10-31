@@ -1,3 +1,37 @@
+# NVAAK Academy
+
+## Runtime requirements
+
+- PHP 8.5.x (also recorded in `.php-version` and Composer's platform configuration).
+- Laravel 13, Livewire 3, and Volt 1.
+- Composer 2 and Node.js 22 with npm for frontend builds.
+- Laravel Excel 4 / PhpSpreadsheet 5 for PHP 8.5 compatibility.
+
+Install the locked dependencies and verify the actual PHP runtime:
+
+```sh
+php -v
+composer install
+composer check-platform-reqs
+npm ci
+npm run build
+php artisan test
+```
+
+## Hostinger VPS / CloudPanel
+
+Create a PHP site using the Laravel 13 template and select PHP 8.5. Point the
+document root at the project's `public` directory. Ensure SSH/CLI PHP and any
+queue workers also use PHP 8.5; changing the site's PHP setting alone does not
+necessarily change CLI PHP.
+
+For production, use `composer install --no-dev --optimize-autoloader` and verify
+the installed extensions with `composer check-platform-reqs --no-dev`. Configure
+the production `.env`, database, and background queue worker before launch.
+Preserve the existing `APP_KEY` when updating an existing installation.
+
+The framework upgrade follows the [Laravel 13 upgrade guide](https://laravel.com/docs/13.x/upgrade).
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
